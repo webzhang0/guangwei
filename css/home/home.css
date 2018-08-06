@@ -1,0 +1,5 @@
+/*导航激活*/
+.home-img {
+	background: url(../../images/common/home-active.png) center center;
+	background-size: 100% 100%;
+}
