@@ -1,0 +1,85 @@
+/*html, body {
+	height: 100%;
+}*/
+.header {
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+	width: 100%;
+	height: 3rem;
+}
+/*内容content*/
+.content {
+	/*position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0.95rem;*/
+	width: 100%;
+	padding: 0 0.2rem 0.95rem;
+	overflow-y: auto;
+}
+.about-title {
+	padding: 0.3rem 0;
+	color: #282828;
+	font-size: 0.4rem;
+}
+.content-detail {
+	padding: 0 0.2rem 2rem;
+	font-size: 0.24rem;
+	color: #282828;
+}
+.paragraph {
+	margin-top: 0.35rem;
+	text-indent: 0.48rem;
+}
+.aboutus-img-wrap {
+	margin: 0.5rem 0;
+}
+/*剧照注脚*/
+.stage-footnote-wrap {
+	padding-right: 0.1rem;
+	text-align: right;
+}
+.stage-row {
+	display: inline-block;
+}
+.stage-circle {
+	display: inline-block;
+	width: 0.06rem;
+	height: 0.06rem;
+	margin: 0 0.02rem 0 0.05rem;
+	border-radius: 0.03rem;
+	background: #282828;
+	vertical-align: middle;
+}
+.stage-footnote {
+	font-style: italic;
+	font-size: 0.2rem;
+}
+/*关于我们*/
+.aboutus-wrap {
+	padding-bottom: 2.15rem;
+}
+.aboutus-item {
+	display: block;
+	width: 100%;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	font-size: 0.36rem;
+	color: #282828;
+	background: url(../../images/aboutus/rightrow.gif) right center no-repeat;
+	background-size: 0.2rem 0.35rem;
+}
+.aboutus-list {
+	border-bottom: 1px solid #dcdcdc;
+	padding: 0 0.2rem;
+}
+.aboutus-list:last-child{
+	border: 0;
+}
+
+/*底部导航*/
+.guangwei-img {
+	background: url(../../images/common/about-active.png) center center;
+	background-size: 100% 100%;
+}

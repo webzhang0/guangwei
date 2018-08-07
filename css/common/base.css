@@ -28,11 +28,12 @@ a{text-decoration:none;}
 
 /*--footer部分--*/
 .footer {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	height: 0.95rem;
+	background: #fff;
 }
 .footer-nav {
 	box-sizing: border-box;
