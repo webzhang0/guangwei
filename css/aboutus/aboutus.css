@@ -42,6 +42,9 @@
 }
 .stage-row {
 	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	background: url(../../images/aboutus/stage_row.gif) center center no-repeat;
 }
 .stage-circle {
 	display: inline-block;
