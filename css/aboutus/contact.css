@@ -1,0 +1,145 @@
+.contact-img {
+    width: 100%;
+    /*    position: absolute;*/
+    /*
+    left:0;
+    top:0;
+*/
+    overflow: hidden;
+    /*    z-index:-1;*/
+}
+
+.contact-img img {
+    float: left;
+    width: 100%;
+}
+
+.contact-content {
+    box-sizing: border-box;
+    /*    margin-top:1.35rem;*/
+    margin-top: -.14rem;
+    width: 100%;
+    position: relative;
+    border-radius: .14rem;
+    padding: 0 .1rem;
+    padding-top: .25rem;
+    background-color: #fff;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.contact-title {
+    font-family: '宋体';
+    background: #fff;
+    color: #343434;
+    font-weight: 600;
+    font-size: .2rem;
+    line-height: .2rem;
+}
+
+#map {
+    margin-top:.2rem;
+    border-radius: .04rem;
+    overflow: hidden;
+    box-shadow:0 0 .4rem #ddd9d9; 
+}
+#map img{
+    width: 100%;
+}
+.myposition{
+    margin-top:.18rem;
+    padding:0 .1rem;
+}
+.myposition .title{
+    font-size:.12rem;
+    color:#1d1d1d;
+    line-height: .27rem;
+    border-bottom:1px solid #b8b8b8;
+    font-weight: 600;
+    margin-bottom:.08rem;
+}
+.myposition .item{
+    padding-left:.2rem;
+    color:#727171;
+    font-size:0.12rem;
+    line-height:0.12rem;
+    margin-bottom:.08rem;
+}
+.myposition .wei{
+    background:url(../../images/aboutus/wei.jpg) no-repeat left center;
+    background-size:.12rem auto;
+}
+.myposition .phone{
+    background:url(../../images/aboutus/phone.jpg) no-repeat left center;
+    background-size:.12rem auto;
+}
+.myposition .dizhi{
+   background:url(../../images/aboutus/dizhi.jpg) no-repeat left center;
+    background-size:.12rem auto;
+}
+.contact-us{
+    overflow: hidden;
+    padding-top:.3rem;
+}
+.contact-us .partOne{
+   float:left;
+   width:44.7%;
+}
+.contact-us .partTwo{
+    float: right;
+    width: 44.7%;
+}
+.contact-us .partThree{
+    margin-top:.15rem;
+    float: left;
+    width: 100%;
+}
+.contact-us .input-name{
+    font-size:.11rem;
+    color:#318aff;
+    line-height: .2rem;
+}
+.contact-us .contact-input{
+    display: block;
+    box-sizing: border-box;
+    background:#dddddd;
+    color:#9e9e9e;
+    border:0;
+    width: 100%;
+    height:.3rem;
+    border-radius:.04rem;
+    padding:0 .1rem;
+}
+.contact-us .contact-textarea{
+    display: block;
+    box-sizing: border-box;
+    background:#dddddd;
+    color:#9e9e9e;
+    border:0;
+    width:100%;
+    height:1.3rem;
+    border-radius:.04rem;
+    padding:.13rem .1rem;
+}
+.contact-btn{
+    float:left;
+    width: 100%;
+    margin-top:.2rem;
+    margin-bottom:.6rem;
+    height:.4rem;
+    background:#eb131a;
+    line-height: .4rem;
+    text-align: center;
+    color:#fff;
+    font-size:.15rem;
+    border-radius: .04rem;
+}
+/*去除百度图标*/
+
+.BMap_cpyCtrl {
+    display: none;
+}
+
+.anchorBL {
+    display: none;
+}

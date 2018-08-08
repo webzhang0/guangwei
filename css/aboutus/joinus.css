@@ -1,0 +1,44 @@
+/*内容content*/
+.content {
+	/*position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0.95rem;*/
+	width: 100%;
+	padding: 0 0.2rem 0.95rem;
+	overflow-y: auto;
+}
+.joinus-title {
+	padding: 0.3rem 0;
+	color: #282828;
+	font-size: 0.4rem;
+}
+
+/*岗位列表*/
+.position-lists li {
+	/*padding: 0.4rem 0;*/
+	border-bottom: 1px solid #b8b8b8;
+}
+.position-item {
+	display: block;
+    padding: 0.4rem 0;
+}
+.position-name {
+	color: #343434;
+	font-size: 0.24rem;
+}
+.position-pay {
+	color: #ef0f1e;
+	font-size: 0.24rem;
+}
+.position-list-b {
+	margin-top: 0.1rem;
+	color: #989898;
+	font-size: 0.22rem;
+}
+.no-more {
+	line-height: 1rem;
+	color: #bdbdbd;
+	font-size: 0.24rem;
+	text-align: center;
+}

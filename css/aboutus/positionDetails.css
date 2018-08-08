@@ -1,0 +1,57 @@
+/*header部分*/
+.header {
+	padding: 0 0.2rem;
+	border-bottom: 0.15rem solid #f2f3f5;
+}
+/*内容content*/
+.content {
+	/*position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0.95rem;*/
+	width: 100%;
+	padding: 0 0.2rem 0.95rem;
+	overflow-y: auto;
+}
+.position-wrap {
+	/*padding-bottom: 0.15rem;*/
+	/*background: #f2f3f5;*/
+}
+.position-title {
+	padding: 0.4rem 0 0.25rem;
+	color: #282828;
+	font-size: 0.4rem;
+}
+.position-inf {
+	padding-bottom: 0.6rem;
+	color: #282828;
+	font-size: 0.24rem;
+}
+.pay {
+	color: #ff0000;
+}
+/*职位描述*/
+.describe-title {
+	padding-top: 0.5rem;
+	color: #525252;
+	font-size: 0.3rem;
+}
+.vline {
+	display: inline-block;
+	width: 0.06rem;
+	height: 0.3rem;
+	margin-right: 0.1rem;
+	/*padding: 0.2rem 0.1rem 0.05rem;*/
+	/*border-left: 0.05rem solid #ff0000;
+	font-size: 0;*/
+	background: #ff0000;
+	border-radius: 0.03rem;
+	vertical-align: middle;
+}
+.introduction {
+	color: #525252;
+	font-size: 0.24rem;
+}
+.introduction-title {
+	padding:0.3rem 0 0.05rem;
+}
