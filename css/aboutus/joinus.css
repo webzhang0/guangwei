@@ -5,11 +5,11 @@
 	left: 0;
 	bottom: 0.95rem;*/
 	width: 100%;
-	padding: 0 0.2rem 0.95rem;
+	padding: 0.5rem 0.2rem 0.95rem;
 	overflow-y: auto;
 }
 .joinus-title {
-	padding: 0.3rem 0;
+	padding: 0.2rem 0 0.3rem;
 	color: #282828;
 	font-size: 0.4rem;
 }

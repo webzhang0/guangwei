@@ -1,5 +1,5 @@
 .header {
-	padding: 0.2rem;
+	/*padding: 0.2rem;*/
 }
 .goback {
 	display: block;
@@ -14,7 +14,7 @@
 }
 /*content部分*/
 .content {
-	padding: 0 0.2rem 2.5rem;
+	padding: 0.5rem 0.2rem 2.5rem;
 }
 .team-title {
 	padding: 0.2rem 0;

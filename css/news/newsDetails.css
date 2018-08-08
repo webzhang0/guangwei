@@ -1,0 +1,29 @@
+.content {
+	padding: 0.5rem 0.2rem 0;
+}
+.news-title {
+	padding: 0.38rem 0;
+	font-size: 0.3rem;
+	color: #343434;
+}
+.news-type {
+	display: inline-block;
+	padding: 0.1rem;
+	margin-right: 0.15rem;
+	border: 1px solid #0a9889;
+	border-radius: 0.04rem;
+	color: #0a9889;
+	font-size: 0.18rem;
+}
+.news-date {
+	color: #838181;
+	font-size: 0.18rem;
+}
+.news-tag {
+	padding-bottom: 0.66rem;
+}
+.paragraph {
+	padding: 0 0.2rem;
+	font-size: 0.28rem;
+	color: #838181;
+}

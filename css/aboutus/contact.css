@@ -1,5 +1,6 @@
 .contact-img {
     width: 100%;
+    padding-top: 0.2rem;
     /*    position: absolute;*/
     /*
     left:0;
@@ -17,12 +18,12 @@
 .contact-content {
     box-sizing: border-box;
     /*    margin-top:1.35rem;*/
-    margin-top: -.14rem;
+    margin-top: -.28rem;
     width: 100%;
     position: relative;
-    border-radius: .14rem;
-    padding: 0 .1rem;
-    padding-top: .25rem;
+    border-radius: .24rem;
+    padding: 0 .2rem;
+    padding-top: .5rem;
     background-color: #fff;
     z-index: 100;
     overflow: hidden;
@@ -33,53 +34,53 @@
     background: #fff;
     color: #343434;
     font-weight: 600;
-    font-size: .2rem;
-    line-height: .2rem;
+    font-size: .4rem;
+    line-height: .4rem;
 }
 
 #map {
-    margin-top:.2rem;
-    border-radius: .04rem;
+    margin-top:.4rem;
+    border-radius: .08rem;
     overflow: hidden;
-    box-shadow:0 0 .4rem #ddd9d9; 
+    box-shadow:0 0 .8rem #ddd9d9; 
 }
 #map img{
     width: 100%;
 }
 .myposition{
-    margin-top:.18rem;
-    padding:0 .1rem;
+    margin-top:.36rem;
+    padding:0 .2rem;
 }
 .myposition .title{
-    font-size:.12rem;
+    font-size:.24rem;
     color:#1d1d1d;
-    line-height: .27rem;
+    line-height: .54rem;
     border-bottom:1px solid #b8b8b8;
     font-weight: 600;
-    margin-bottom:.08rem;
+    margin-bottom:.16rem;
 }
 .myposition .item{
-    padding-left:.2rem;
+    padding-left:.4rem;
     color:#727171;
-    font-size:0.12rem;
-    line-height:0.12rem;
-    margin-bottom:.08rem;
+    font-size:0.24rem;
+    line-height:0.24rem;
+    margin-bottom:.16rem;
 }
 .myposition .wei{
     background:url(../../images/aboutus/wei.jpg) no-repeat left center;
-    background-size:.12rem auto;
+    background-size:.24rem auto;
 }
 .myposition .phone{
     background:url(../../images/aboutus/phone.jpg) no-repeat left center;
-    background-size:.12rem auto;
+    background-size:.24rem auto;
 }
 .myposition .dizhi{
    background:url(../../images/aboutus/dizhi.jpg) no-repeat left center;
-    background-size:.12rem auto;
+    background-size:.24rem auto;
 }
 .contact-us{
     overflow: hidden;
-    padding-top:.3rem;
+    padding-top:.6rem;
 }
 .contact-us .partOne{
    float:left;
@@ -90,14 +91,14 @@
     width: 44.7%;
 }
 .contact-us .partThree{
-    margin-top:.15rem;
+    margin-top:.3rem;
     float: left;
     width: 100%;
 }
 .contact-us .input-name{
-    font-size:.11rem;
+    font-size:.22rem;
     color:#318aff;
-    line-height: .2rem;
+    line-height: .4rem;
 }
 .contact-us .contact-input{
     display: block;
@@ -106,9 +107,10 @@
     color:#9e9e9e;
     border:0;
     width: 100%;
-    height:.3rem;
-    border-radius:.04rem;
-    padding:0 .1rem;
+    height:.6rem;
+    font-size: .22rem;
+    border-radius:.08rem;
+    padding:0 .2rem;
 }
 .contact-us .contact-textarea{
     display: block;
@@ -117,22 +119,23 @@
     color:#9e9e9e;
     border:0;
     width:100%;
-    height:1.3rem;
-    border-radius:.04rem;
-    padding:.13rem .1rem;
+    height:2.6rem;
+     font-size: .22rem;
+    border-radius:.08rem;
+    padding:.26rem .2rem;
 }
 .contact-btn{
     float:left;
     width: 100%;
-    margin-top:.2rem;
-    margin-bottom:.6rem;
-    height:.4rem;
+    margin-top:.4rem;
+    margin-bottom:1.2rem;
+    height:.8rem;
     background:#eb131a;
-    line-height: .4rem;
+    line-height: .8rem;
     text-align: center;
     color:#fff;
-    font-size:.15rem;
-    border-radius: .04rem;
+    font-size:.3rem;
+    border-radius: .08rem;
 }
 /*去除百度图标*/
 

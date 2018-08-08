@@ -25,7 +25,33 @@ a{text-decoration:none;}
 .fl-l {float: left;}
 .fl-r {float: right;}
 
-
+/*返回按钮*/
+.back-wrap {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	height: 0.5rem;
+	padding: 0.15rem 0.2rem 0;
+	background: #fff;
+	z-index: 1000;
+}
+.goback {
+	display: block;
+	width: 0.66rem;
+	height: 0.28rem;
+	line-height: 0.28rem;
+	background: url(../../images/aboutus/goback.gif) left center no-repeat;
+	background-size: 0.12rem 0.22rem;
+	font-size: 0.24rem;
+	color: #318aff;
+	text-align: right;
+}
+/*内容content*/
+.content {
+	padding-top: 0.5rem;
+}
 /*--footer部分--*/
 .footer {
 	position: fixed;

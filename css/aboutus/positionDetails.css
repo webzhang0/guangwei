@@ -14,11 +14,11 @@
 	overflow-y: auto;
 }
 .position-wrap {
-	/*padding-bottom: 0.15rem;*/
+	padding-top: 0.5rem;
 	/*background: #f2f3f5;*/
 }
 .position-title {
-	padding: 0.4rem 0 0.25rem;
+	padding: 0.2rem 0 0.25rem;
 	color: #282828;
 	font-size: 0.4rem;
 }
