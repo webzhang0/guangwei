@@ -6,6 +6,9 @@ header{
     text-indent: .2rem;
     font-weight: 600;
 }
+.content {
+    padding-bottom: 2rem;
+}
 .banner{
     width:100%;
     height:3.8rem;
@@ -46,11 +49,15 @@ header{
     line-height: .24rem;
     margin-bottom:.2rem;
     color:#363636;
-    font-weight: 600;
+    /*font-weight: 600;*/
 }
 .time-line-box .item-content{
     font-size:.3rem;
     color:#363636;
     font-weight: 600;
     margin-bottom:.55rem;
+}
+.guangwei-img {
+    background: url(../../images/common/about-active.png) center center;
+    background-size: 100% 100%;
 }

@@ -55,3 +55,7 @@
 .introduction-title {
 	padding:0.3rem 0 0.05rem;
 }
+.guangwei-img {
+    background: url(../../images/common/about-active.png) center center;
+    background-size: 100% 100%;
+}

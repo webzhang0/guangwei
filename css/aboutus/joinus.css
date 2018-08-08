@@ -42,3 +42,7 @@
 	font-size: 0.24rem;
 	text-align: center;
 }
+.guangwei-img {
+    background: url(../../images/common/about-active.png) center center;
+    background-size: 100% 100%;
+}
