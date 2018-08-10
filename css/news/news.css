@@ -71,6 +71,7 @@
 .lists-item-title {
 	color: #343434;
 	font-size: 0.28rem;
+	text-indent: -.5em;
 }
 .list-inf {
 	position: absolute;
