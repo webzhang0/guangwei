@@ -9,12 +9,12 @@
 }
 .plays-inf {
 	/*padding-left: 0.2rem;*/
-	max-width: 5rem;
+	max-width: 4.7rem;
 }
 .plays-title {
 	font-size: 0.3rem;
 	color: #343434;
-	text-indent: -0.5em;
+	/*text-indent: -0.5em;*/
 }
 .ticket-status-wrap {
 	padding: 0.1rem 0;
@@ -29,6 +29,7 @@
 	color: #f0202e;
 }
 .price {
+    padding-left: .1rem;
 	font-size: 0.24rem;
 	color: #ef0f1e;
 	font-weight: 600;
