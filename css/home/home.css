@@ -3,3 +3,235 @@
 	background: url(../../images/common/home-active.png) center center;
 	background-size: 100% 100%;
 }
+.home-content{
+    padding-bottom: .95rem;
+}
+/*banner*/
+.banner{
+    width: 100%;
+    border-bottom:.15rem solid #f2f3f5;
+}
+.banner img{
+    width: 100%;
+}
+.swiper-pagination-bullet{
+    background:rgba(255,255,255,0.5)
+}
+.swiper-pagination-bullet-active{
+    background:#fff;
+}
+/*剧情推荐*/
+.recommendation{
+    width:100%;
+}
+.recommendation-title{
+    height:1.5rem;
+    line-height: 1.5rem;
+    font-size:.4rem;
+    padding-left:.2rem;
+    font-weight: 600;
+    color:#343434;
+}
+.reommendation-cover{
+    width: 100%;
+    position: relative;
+}
+.reommendation-cover img{
+    width:100%;
+}
+.reommendation-cover .tip{
+    position: absolute;
+    left:.2rem;
+    top:.36rem;
+    background:#ef0f1e;
+    width: 1rem;
+    text-align: center;
+    color:#fff;
+    height: .4rem;
+    line-height: .38rem;
+    font-size: .2rem;
+    border-radius: .04rem;
+    border-bottom-right-radius: .08rem;
+}
+.reommendation-list{
+    border-bottom:.15rem solid #f2f3f5;
+}
+.reommendation-list ul{
+    box-sizing: border-box;
+    width: 100%;
+    padding: .18rem .2rem 1.3rem .2rem;
+    display: -webkit-flex;
+    display: flex;
+    justify-content:space-between;
+    overflow: hidden;
+}
+.reommendation-list ul li{
+/*    float:left;*/
+    width:2.25rem;
+/*    margin-right: .15rem*/
+}
+/*
+.reommendation-list ul:last-child{
+    margin-right:0;
+}
+*/
+.reommendation-list ul li img{
+    width: 100%;
+}
+.reommendation-list .describe h2{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:.22rem;
+    line-height: .22rem;
+    margin-top:.22rem;
+     color:#282828;
+}
+.reommendation-list .describe span{
+    display:inline-block;
+    padding:0 .09rem;
+    height: .34rem;
+    text-align: center;
+    line-height: .34rem;
+    border:1px solid #ef0f1e;
+    border-radius: .04rem;
+    font-size:.18rem;
+    color:#fc3f4d;
+    margin-top:.14rem;
+}
+.reommendation-list .describe .time{
+     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:#8c8c8c;
+    font-size:.18rem;
+    line-height: .18rem;
+    margin-top:.14rem;  
+}
+.swiper-pagination.reommendation-pagination{
+    height: .12rem;
+    bottom:.6rem;
+}
+.reommendation-pagination .swiper-pagination-bullet{
+     width:.4rem;
+     height: .12rem;
+     border-radius: .12rem;
+    background:#d1d1d1;
+    opacity: 1;
+    margin:0 .1rem!important;
+}
+.reommendation-pagination .swiper-pagination-bullet-active{
+    background: #ef0f1e;
+}
+.news{
+   border-bottom:.17rem solid #f2f3f5; 
+}
+#newsSwiper{
+    overflow:visible;
+}
+.news-title{
+    font-size:.4rem;
+    line-height: .4rem;
+    font-weight: 600;
+    padding:.5rem 0;
+}
+.news-list{
+    padding:0 .2rem;
+    padding-bottom:.6rem;
+    overflow: hidden;
+}
+.news-item{
+    width:4.18rem;
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.5);
+}
+.news-item img{
+    width:100%;
+}
+.news-item .bottom{
+    width: 100%;
+    padding:.25rem .2rem .2rem;
+    height:1.33rem;
+}
+.green{
+    background:#32b8aa;
+}
+.red{
+    background:#d97c83;
+}
+.bule{
+   background:#7b9cd9;
+}
+.news-item .bottom .name{
+  font-size:.24rem;
+  color:#fff;
+    font-weight: 600;
+  line-height: .3rem;
+    height:.6rem;
+    overflow: hidden;
+}
+.news-item .img-box{
+    width: 100%;
+    position: relative;
+    height:2.38rem;
+    overflow: hidden;
+}
+.news-item .img-box .tip{
+    position: absolute;
+    left:.17rem;
+    bottom:.13rem;
+    font-size:.22rem;
+    padding:.1rem;
+    border-radius:.05rem;
+    background:#fff;
+    color:#2a2a2a;
+}
+.news-item .bottom .time{
+    text-align: right;
+    font-size:.18rem;
+    line-height: .18rem;
+    margin-top:.13rem;
+    color:#fff;
+}
+
+.hot{
+    width: 100%;
+    padding-bottom:.6rem;
+}
+.hot-title{
+   font-size:.4rem;
+    line-height: .4rem;
+    font-weight: 600;
+    padding:.5rem .2rem; 
+    color:#343434;
+}
+.hot-list{
+    padding:0 .2rem;
+}
+.hot-item{
+    position: relative;
+    padding-bottom:.4rem;
+    border-bottom:1px solid #b8b8b8;
+    margin-bottom: .4rem;
+}
+.hot-item img{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 2.4rem;
+    height:1.8rem;
+    border-radius:.06rem;
+}
+.hot-item .hot-right{
+    height:1.8rem;
+    padding-left:2.68rem;
+}
+.hot-item-title{
+    font-size:.26rem;
+    font-weight: 600;
+    margin-bottom:.16rem;
+    color:#343434;
+}
+.hot-item-content{
+    font-size:.2rem;
+    color:#6e6d6d;
+}
