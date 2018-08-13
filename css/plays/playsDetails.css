@@ -108,3 +108,188 @@
 	font-size: .26rem;
 	color: #676767;
 }
+/* 精彩剧照 */
+.stage-photo {
+	padding-left:.2rem;
+}
+.stage-photo-title {
+	padding: .3rem 0;
+	font-size: .4rem;
+	color: #343434;
+}
+.stage-photo-wrap {
+	width: 3rem;
+	height: 1.7rem;
+	margin-right: .12rem;
+}
+/* 主创介绍 */
+.creators-wrap {
+	/*width: 5.12rem;*/
+	/*height: 3.5rem;*/
+}
+.creator-wrap {
+	display: block;
+	width: 4.9rem;
+	height: 3.3rem;
+	padding: 0 .35rem;
+	margin-right: .2rem;
+	margin: .2rem 0 .2rem .2rem;
+    box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.03);
+    border-radius: .05rem;
+} 
+.creator-wrap:last-child {
+	margin-right: .2rem;
+}
+.personal {
+	padding: .45rem 0 .25rem;
+}
+.profile-wrap {
+	width: 1.44rem;
+	height: 1.44rem;
+	border-radius: 0.72rem;
+	background: url(../../images/aboutus/profile.gif) no-repeat center center;
+	background-size: 100% 100%;
+}
+.creators {
+	padding-left: .2rem;
+}
+.creators-title {
+	padding: .3rem 0;
+	font-size: .4rem;
+	color: #343434;
+}
+.name-position {
+    padding: .25rem 0 0 .15rem;
+}
+.creator-name {
+	font-size: .36rem;
+	color: #343434;
+}
+.creator-position {
+	color: #acabab;
+	font-size: .24rem;
+}
+.intro {
+	font-size: .24rem;
+	color: #6e6d6d;
+}
+
+/*观众剧评*/
+.comments-wrap {
+	padding: 0 .2rem;
+}
+.comments-title {
+	padding-top: .3rem;
+	font-size: .4rem;
+	color: #343434;
+}
+.more-comments {
+    padding-top: .4rem;
+	font-size: .24rem;
+	color: #318aff;
+}
+.author-profile {
+	width: .62rem;
+	height: .62rem;
+	background: url(../../images/aboutus/profile.gif) no-repeat center center;
+	background-size: 100% 100%;
+}
+.author-name {
+	line-height: .62rem;
+	font-size: .3rem;
+	color: #292929;
+	font-weight: 600;
+}
+.author-inf {
+	width: 6.25rem;
+	padding: 0 .6rem .2rem .2rem;
+}
+.comment-content {
+	font-size: .24rem;
+	color: #838181;
+}
+.comment-date {
+	padding: .1rem 0;
+	font-size: .18rem;
+	color: #8c8c8c;
+}
+.comment-item {
+	margin-top: .4rem;
+	border-bottom: 1px solid #eee;
+}
+.comment-item:last-child {
+	border: 0;
+}
+/* 媒体报道 */
+.report-wrap {
+	padding: 0 .2rem;
+}
+.report-title {
+	padding-top: .3rem;
+	font-size: .4rem;
+	color: #343434;
+}
+.more-report {
+    padding-top: .4rem;
+	font-size: .24rem;
+	color: #318aff;
+}
+.report-item {
+	padding-top: .5rem;
+}
+.report-a {
+	display: block;
+}
+.report-img {
+	width: 2.9rem;
+	height: 2rem;
+	border-radius: .05rem;
+	/*background: url(../../images/aboutus/profile.gif) no-repeat center center;*/
+}
+.report-item-inf {
+	width: 3.8rem;
+}
+.report-item-title {
+	font-size: .28rem;
+	color: #343434;
+}
+.report-item-con {
+	padding: .15rem 0;
+	font-size: .22rem;
+	color: #343434;
+}
+.report-src-wrap {
+	font-size: .18rem;
+	color: #8c8c8c;
+}
+/* 购票 */
+.buy-wrap {
+	margin-top: 1.4rem;
+	padding: 0 .4rem;
+}
+.btn-block {
+	display: block;
+	width: 100%;
+	height: 1.06rem;
+	/*padding: .3rem 0;*/
+	border-radius: .05rem;
+	text-align: center;
+}
+.buy-ticket {
+	padding-top: .2rem;
+	background: #ed111b;
+	font-size: .3rem;
+	font-weight: 600;
+	color: #fff;
+}
+.stop-ticket {
+	line-height: 1.06rem;
+	background: #b9b7b7;
+	font-size: .3rem;
+	font-weight: 600;
+	color: #fff;
+}
+.third-text {
+	font-size: .2rem;
+	color: #fff;
+}

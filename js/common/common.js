@@ -25,3 +25,14 @@ function formatterDate(millisecond) {
 
 	return oYear + '年' + oMonth + '月' + oD + '日';
 }
+/*URL获取参数*/
+function getParams(name) {
+	var search = decodeURI(window.location.search).substr(1);
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');
+	var param = search.match(reg);
+	if (param != null) {
+		return param[2];
+	}else {
+		return null;
+	}
+}
