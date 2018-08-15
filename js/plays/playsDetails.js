@@ -86,7 +86,7 @@ function renderFirstScreen(data) {
         creatorsHtml += '<a href="javascript:;" class="swiper-slide creator-wrap"><div class="clearfix personal"><img class="profile-wrap fl-l" src="'+ data['performers'][k]['performerPhoto'] +'"><div class="name-position fl-l">'
             +'<span class="creator-name">'+ data['performers'][k]['performer'] +'</span><br/>'
             +'<span class="creator-position">'+ data['performers'][k]['performerLabel'] +'</span></div></div>'
-            +'<p class="intro">'+ data['performers'][k]['performerIntroduce'] +'</p></a>'
+            +'<p class="intro">'+ data['performers'][k]['performerIntroduce'].substr(0, 30) +'...</p></a>'
     }
     creatorsHtml += '</div>';
     $('#creatorsSwiper').html(creatorsHtml);
@@ -102,11 +102,20 @@ function renderFirstScreen(data) {
             +'<img class="author-profile fl-l"></div>'
             +'<div class="author-inf fl-l">'
             +'<p class="author-name">'+ data['comments'][l]['commentUser'] +'</p>'
-            +'<p class="comment-content">'+ data['comments'][l]['commentDetail'] +'</p>'
-            +'<p class="comment-date">' + formatterDate(data['comments'][l]['commentDateTime']) + '</p>'
+            if(data['comments'][l]['commentDetail'].length > 125) {
+                comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'].substr(0, 125) +'...<span class="see-all">展开</span></p>'
+            }else {
+                comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'] +'</p>'
+            }
+        comments +='<p class="comment-date">' + formatterDate(data['comments'][l]['commentDateTime']) + '</p>'
             +'</div></li>'
     }
     $('#comments').html(comments);
+
+    $('#comments').on('click', '.see-all', function() {
+        var index = $(this).closest('li').index();
+        $(this).html(data['comments'][index]);
+    });
 
     // 媒体报道
     var reportsHtml = '';
