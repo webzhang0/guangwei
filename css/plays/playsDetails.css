@@ -10,6 +10,7 @@
 	right: 0.2rem;
 	bottom: 0.3rem;
 	width: 4.3rem;
+	padding-left: .1rem;
 }
 .plays-title {
 	padding-bottom: 0.2rem;
@@ -90,6 +91,7 @@
 	font-size: 0.28rem;
 }
 .performance-expand-wrap {
+	display: none;
 	position: absolute;
 	width: 100%;
 	height: 1rem;
@@ -228,8 +230,8 @@
 .author-profile {
 	width: .62rem;
 	height: .62rem;
-	background: url(../../images/aboutus/profile.gif) no-repeat center center;
-	background-size: 100% 100%;
+	/*background: url(../../images/aboutus/profile.gif) no-repeat center center;
+	background-size: 100% 100%;*/
 }
 .author-name {
 	line-height: .62rem;
@@ -238,8 +240,10 @@
 	font-weight: 600;
 }
 .author-inf {
-	width: 6.25rem;
-	padding: 0 .6rem .2rem .2rem;
+	/*width: 6.25rem;
+	padding: 0 .6rem .2rem .2rem;*/
+	width: 6.2rem;
+    padding: 0 0.2rem .2rem .2rem;
 }
 .comment-content {
 	/*max-height: 2.1rem;
@@ -303,7 +307,7 @@
 }
 /* 购票 */
 .buy-wrap {
-	margin-top: 1.4rem;
+	margin: 1.4rem 0;
 	padding: 0 .4rem;
 }
 .btn-block {
@@ -315,6 +319,7 @@
 	text-align: center;
 }
 .buy-ticket {
+	display: none;
 	padding-top: .2rem;
 	background: #ed111b;
 	font-size: .3rem;
@@ -322,6 +327,7 @@
 	color: #fff;
 }
 .stop-ticket {
+	display: none;
 	line-height: 1.06rem;
 	background: #b9b7b7;
 	font-size: .3rem;
@@ -331,4 +337,11 @@
 .third-text {
 	font-size: .2rem;
 	color: #fff;
+}
+.see-all {
+	padding: 0 .1rem;
+    color: #318aff;
+}
+.report-date {
+	padding-left: .1rem;
 }

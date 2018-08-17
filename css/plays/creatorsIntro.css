@@ -1,0 +1,103 @@
+html, body {
+	background: #f2f3f5;
+}
+.content {
+	/*padding: .5rem .2rem 0;*/
+}
+.creators-wrap {
+	padding: 0 .2rem .4rem;
+	background: #fff;
+}
+.personal {
+	padding: .45rem 0 .25rem;
+}
+.profile-wrap {
+	width: 1.44rem;
+	height: 1.44rem;
+	border-radius: 0.72rem;
+	background: url(../../images/aboutus/profile.gif) no-repeat center center;
+	background-size: 100% 100%;
+}
+.creators {
+	padding-left: .2rem;
+}
+.creators-title {
+	padding: .3rem 0;
+	font-size: .4rem;
+	color: #343434;
+}
+.name-position {
+    padding: .25rem 0 0 .15rem;
+}
+.creator-name {
+	font-size: .36rem;
+	color: #343434;
+}
+.creator-position {
+	color: #acabab;
+	font-size: .24rem;
+}
+.intro {
+	font-size: .24rem;
+	color: #6e6d6d;
+}
+/*更多介绍*/
+.more-intro {
+	margin-top: .2rem;
+	padding: 0 .2rem .4rem; 
+	background: #fff;
+}
+.more-title {
+	padding: .3rem 0 .25rem;
+	font-size: .3rem;
+	color: #343434;
+}
+.more-intro-content {
+	font-size: .24rem;
+    color: #6e6d6d;
+}
+/* 主创团队 */
+.team-wrap {
+	margin-top: .2rem;
+	padding: 0 .2rem .4rem; 
+	background: #fff;
+}
+.team-title {
+	padding: .3rem 0 .25rem;
+	font-size: .3rem;
+	color: #343434;
+}
+.position {
+	width: 1.6rem;
+	font-size: .24rem;
+	color: #939393;
+}
+.member {
+	width: 5rem;
+	padding-left: .2rem;
+	font-size: .24rem;
+	color: #282828;
+}
+/*其他内容*/
+.other-content {
+	margin-top: .2rem;
+	padding: 0 .2rem .4rem; 
+	background: #fff;
+}
+.other-title {
+	padding: .3rem 0 .25rem;
+	font-size: .3rem;
+	color: #343434;
+}
+.other-con {
+	font-size: .24rem;
+	color: #939393;
+}
+.other-name {
+	font-size: .24rem;
+	color: #939393;
+}
+.other-value {
+	font-size: .24rem;
+	color: #282828;
+}

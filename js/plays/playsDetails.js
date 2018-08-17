@@ -43,6 +43,45 @@ function renderFirstScreen(data) {
     });
 
     // 演出信息
+    var showTimeDetail = drama['showTimeDetail'].replace(/(<br\/>)|(<br>)|(\n)|(\r)/g, '<br/>').split('<br/>');
+    var performanceHtml = '';
+    var showTimeItems = showTimeDetail.length > 5 ? 5 : showTimeDetail.length;
+    for (var m = 0; m < showTimeItems; m++) {
+        if (showTimeDetail[m] == "") {
+            continue;
+        }
+        performanceHtml += '<li class="clearfix">'
+        +'<img src="../../images/plays/location.gif" class="fl-l location-pic">'
+        +'<div class="date-site fl-l">'
+        +'<p class="performance-site">'+ showTimeDetail[m].split('：')[0] +'</p>'
+        +'<p class="performance-date">'+ showTimeDetail[m].split('：')[1] +'</p></div>'
+        +'<p class="ticket-price fl-r">￥'+ drama['minPrice'] + '-' + drama['maxPrice'] +'</p></li>'
+    }
+    $('#performanceLists').html(performanceHtml);
+
+    if (showTimeDetail.length > 5) {
+        $('#performanceExpand').show();
+
+        $('#performanceExpand').click(function () {
+            var performanceHtml = '';
+            for (var m = 5; m < showTimeDetail.length; m++) {
+                if (showTimeDetail[m] == "") {
+                    continue;
+                }
+                performanceHtml += '<li class="clearfix">'
+                +'<img src="../../images/plays/location.gif" class="fl-l location-pic">'
+                +'<div class="date-site fl-l">'
+                +'<p class="performance-site">'+ showTimeDetail[m].split('：')[0] +'</p>'
+                +'<p class="performance-date">'+ showTimeDetail[m].split('：')[1] +'</p></div>'
+                +'<p class="ticket-price fl-r">￥'+ drama['minPrice'] + '-' + drama['maxPrice'] +'</p></li>'
+            }
+            $('#performanceLists').append(performanceHtml);
+            $('#performanceExpand').hide();
+        })
+    }
+        
+
+    // 剧情简介
     var view = document.getElementById('synopsisContent');
     var str = drama['dramaDetail'];
     var oHeight = view.offsetHeight;
@@ -83,7 +122,7 @@ function renderFirstScreen(data) {
     var creatorsHtml = '<div class="swiper-wrapper creators-wrap">';
     for (var k = 0; k < data['performers'].length; k++) {
         // data['performers'][k]
-        creatorsHtml += '<a href="javascript:;" class="swiper-slide creator-wrap"><div class="clearfix personal"><img class="profile-wrap fl-l" src="'+ data['performers'][k]['performerPhoto'] +'"><div class="name-position fl-l">'
+        creatorsHtml += '<a href="creatorsIntro.html?id='+ data['drama']['id'] +'" class="swiper-slide creator-wrap"><div class="clearfix personal"><img class="profile-wrap fl-l" src="'+ data['performers'][k]['performerPhoto'] +'"><div class="name-position fl-l">'
             +'<span class="creator-name">'+ data['performers'][k]['performer'] +'</span><br/>'
             +'<span class="creator-position">'+ data['performers'][k]['performerLabel'] +'</span></div></div>'
             +'<p class="intro">'+ data['performers'][k]['performerIntroduce'].substr(0, 30) +'...</p></a>'
@@ -96,14 +135,17 @@ function renderFirstScreen(data) {
     });
 
     // 观众剧评
+    $('#allComments').click(function () {
+        window.location.href = '../../views/plays/allComments.html?id=' + data['drama']['id'];
+    })
     var comments = '';
     for(var l = 0; l < data['comments'].length; l++) {
         comments += '<li class="clearfix comment-item">'
-            +'<img class="author-profile fl-l"></div>'
+            +'<img class="author-profile fl-l" src="' + returnProfile() + '"></div>'
             +'<div class="author-inf fl-l">'
             +'<p class="author-name">'+ data['comments'][l]['commentUser'] +'</p>'
-            if(data['comments'][l]['commentDetail'].length > 125) {
-                comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'].substr(0, 125) +'...<span class="see-all">展开</span></p>'
+            if(data['comments'][l]['commentDetail'].length > 120) {
+                comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'].substr(0, 120) +'...<span class="see-all">查看全部></span></p>'
             }else {
                 comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'] +'</p>'
             }
@@ -114,10 +156,13 @@ function renderFirstScreen(data) {
 
     $('#comments').on('click', '.see-all', function() {
         var index = $(this).closest('li').index();
-        $(this).html(data['comments'][index]);
+        $(this).parent('.comment-content').html(data['comments'][index]['commentDetail']);
     });
 
     // 媒体报道
+    $('#moreReport').click(function () {
+        window.location.href = 'allReport.html?id='+ data['drama']['id'];
+    });
     var reportsHtml = '';
     for(var n = 0; n < data['articles'].length; n++) {
         reportsHtml += '<li class="report-item">'
@@ -125,12 +170,44 @@ function renderFirstScreen(data) {
             +'<img src="'+ data['articles'][n]['articleBanner'] + '" class="report-img fl-l">'
             +'<div class="fl-r report-item-inf">'
             +'<h3 class="report-item-title">' + data['articles'][n]['articleTitle'] + '</h3>'
-            +'<p class="report-item-con">'+ data['articles'][n]['articleIntroduce'] +'</p>'
-            +'<p class="report-src-wrap"><span class="report-src">光纬戏剧</span><span class="report-date">'+ formatterDate(data['comments'][n]['createDateTime']) +'</span></p>'
+
+            if(data['articles'][n]['articleIntroduce'].length > 25) {
+                reportsHtml +='<p class="report-item-con">' + data['articles'][n]['articleIntroduce'].substr(0, 25) +'...<span class="see-all">查看全部></span></p>'
+            }else {
+                reportsHtml +='<p class="report-item-con">' + data['articles'][n]['articleIntroduce'] +'</p>'
+            }
+
+        reportsHtml +='<p class="report-src-wrap"><span class="report-src">光纬戏剧</span><span class="report-date">'+ formatterDate(data['comments'][n]['createDateTime']) +'</span></p>'
             +'</div></a></li>'
     }
     $('#reports').html(reportsHtml);
+    $('#reports').on('click', '.see-all', function() {
+        var index = $(this).closest('li').index();
+        $(this).parent('.report-item-con').html(data['articles'][index]['articleIntroduce']);
+    });
+
+    // 购票按钮
+    $('#thirdPartyLink').attr('href', data['drama']['thirdPartyLink']);
+    if (data['drama']['theShelves'] == 1 && amongShow(data['drama']['showStartDateTime'], data['drama']['showEndDateTime'])) {
+        $('#thirdPartyLink').css('display','block'); 
+    }else {
+        $('#stopTicket').css('display','block'); 
+    }
 
 
 
+}
+/*当前时间是否在开始结束时间之间*/
+function amongShow(showStartDateTime, showEndDateTime) {
+    var newTime = new Date().getTime();
+    return (showStartDateTime <= newTime ) && (showEndDateTime >= newTime);
+}
+/*随机返回头像*/
+function returnProfile() {
+    var num = parseInt(Math.random()*10);
+    if (num%2 == 0) {
+        return '../../images/plays/profile-f.png';
+    }else {
+        return '../../images/plays/profile-m.png';
+    }
 }

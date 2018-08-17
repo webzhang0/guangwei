@@ -36,7 +36,7 @@
     	<div class="performance-inf-wrap">
     		<h3 class="performance-inf-title">演出信息</h3>
     		<div class="performance-inf-lists-wrap">
-    			<ul class="performance-inf-lists">
+    			<ul class="performance-inf-lists" id="performanceLists">
     				<li class="clearfix">
     					<img src="../../images/plays/location.gif" class="fl-l location-pic">
     					<div class="date-site fl-l">
@@ -78,7 +78,7 @@
     					<p class="ticket-price fl-r">￥60-500</p>
     				</li>
     			</ul>
-    			<div class="performance-expand-wrap">
+    			<div class="performance-expand-wrap" id="performanceExpand">
     				<a href="javascript:;" class="performance-expand">
     					<span class="triangle"></span>
 	    				<span>展开</span>
@@ -156,7 +156,7 @@
     	<div class="comments-wrap">
     		<div class="clearfix">
 	    		<h3 class="fl-l comments-title">观众剧评</h3>
-    			<a class="fl-r more-comments">更多剧评</a>
+    			<a class="fl-r more-comments" href="javascript:;" id="allComments">更多剧评</a>
     		</div>
     		<ul id="comments">
     			<!-- <li class="clearfix comment-item">
@@ -187,7 +187,7 @@
     	<div class="report-wrap">
     		<div class="clearfix">
 	    		<h3 class="fl-l report-title">媒体报道</h3>
-    			<a class="fl-r more-report">更多报道</a>
+    			<a class="fl-r more-report" href="javascript:;" id="moreReport">更多报道</a>
     		</div>
     		<ul id="reports">
     			<!-- <li class="report-item">
@@ -226,11 +226,11 @@
 
     	<!-- 购票 -->
     	<div class="buy-wrap">
-    		<a href="javascript:;" class="btn-block buy-ticket">
+    		<a href="javascript:;" class="btn-block buy-ticket" id="thirdPartyLink">
     			<p>立即购票</p>
     			<p class="third-text">（前往第三方网站购票）</p>
     		</a>
-    		<a href="javascript:;" class="btn-block stop-ticket">本轮已结束，请关注下轮</a>
+    		<a href="javascript:;" class="btn-block stop-ticket" id="stopTicket">本轮已结束，请关注下轮</a>
     	</div>
     </div>
 	

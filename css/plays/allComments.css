@@ -1,0 +1,65 @@
+.all-comments-title {
+	padding-bottom: 0.2rem;
+	border-bottom: 1px solid #c9c9c9;
+	font-size: 0.36rem;
+	color: #fff;
+}
+
+/*观众剧评*/
+.comments-wrap {
+	padding: 0 .2rem;
+}
+.comments-title {
+	padding-top: .3rem;
+	font-size: .4rem;
+	color: #343434;
+}
+.more-comments {
+    padding-top: .4rem;
+	font-size: .24rem;
+	color: #318aff;
+}
+.author-profile {
+	width: .62rem;
+	height: .62rem;
+	background: url(../../images/aboutus/profile.gif) no-repeat center center;
+	background-size: 100% 100%;
+}
+.author-name {
+	line-height: .62rem;
+	font-size: .3rem;
+	color: #292929;
+	font-weight: 600;
+}
+.author-inf {
+	width: 6.2rem;
+	padding: 0 0.2rem .2rem .2rem;
+}
+.comment-content {
+	/*max-height: 2.1rem;
+	overflow: auto;*/
+	font-size: .24rem;
+	color: #838181;
+}
+.comment-date {
+	padding: .1rem 0;
+	font-size: .18rem;
+	color: #8c8c8c;
+}
+.comment-item {
+	margin-top: .4rem;
+	border-bottom: 1px solid #eee;
+}
+.comment-item:last-child {
+	border: 0;
+}
+.see-all {
+	padding: 0 .1rem;
+    color: #318aff;
+}
+.no-more {
+	line-height: 1rem;
+	color: #bdbdbd;
+	font-size: 0.24rem;
+	text-align: center;
+}
