@@ -7,55 +7,43 @@
 .content {
 	padding: 0.3rem 0.2rem 0;
 }
-.stage-photo {
-	width: 1.9rem;
+.report-wrap {
+	padding: 0 .2rem;
 }
-.plays-item {
+.report-title {
+	padding-top: .3rem;
+	font-size: .4rem;
+	color: #343434;
+}
+.report-item {
+	padding-top: .5rem;
+}
+.report-a {
 	display: block;
 }
-.plays-inf {
-	/*padding-left: 0.2rem;*/
-	max-width: 4.7rem;
+.report-img {
+	width: 2.9rem;
+	height: 2rem;
+	border-radius: .05rem;
+	/*background: url(../../images/aboutus/profile.gif) no-repeat center center;*/
 }
-.plays-title {
-	font-size: 0.3rem;
+.report-item-inf {
+	width: 3.8rem;
+}
+.report-item-title {
+	font-size: .28rem;
 	color: #343434;
-	/*text-indent: -0.5em;*/
 }
-.ticket-status-wrap {
-	padding: 0.1rem 0;
-	color: #ef0f1e;
+.report-item-con {
+	padding: .15rem 0;
+	font-size: .22rem;
+	color: #343434;
 }
-.ticket-status {
-	display: inline-block;
-	padding: 0.03rem;
-	border: 1px solid #f0202e;
-	border-radius: 0.05rem;
-	font-size: 0.18rem;
-	color: #f0202e;
+.report-src-wrap {
+	font-size: .18rem;
+	color: #8c8c8c;
 }
-.price {
-    padding-left: .1rem;
-	font-size: 0.24rem;
-	color: #ef0f1e;
-	font-weight: 600;
-	/*vertical-align: middle;*/
-}
-.show-date-wrap, .show-place-wrap {
-	color: #939393;
-	font-size: 0.22rem;
-}
-.synopsis {
-	padding: 0.1rem 0.2rem;
-	margin: 0.1rem 0 0 0;
-	border-radius: 0.05rem;
-	background: #f2f3f5;
-	color: #939393;
-	font-size: 0.22rem;
-}
-.plays-lists {
-	padding-bottom: 0.8rem;
-}
-.plays-lists li{
-	margin-bottom: 0.8rem;
+.see-all {
+	padding: 0 .1rem;
+    color: #318aff;
 }
