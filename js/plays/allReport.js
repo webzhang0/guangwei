@@ -29,7 +29,7 @@ function renderAllReport(data) {
         reportsHtml += '<li class="report-item">'
             +'<a href="javascript:;" class="clearfix report-a">'
             +'<img src="'+ data[n]['articleBanner'] + '" class="report-img fl-l">'
-            +'<div class="fl-r report-item-inf">'
+            +'<div class=" report-item-inf">'
             +'<h3 class="report-item-title">' + data[n]['articleTitle'] + '</h3>'
 
             if(data[n]['articleIntroduce'].length > 25) {

@@ -78,7 +78,7 @@ var homePage = {
     news:function(){
         var html = '';
         $.each(indexData.articles,function(index,item){
-            html+='<div class="swiper-slide news-item"><a href="">'
+            html+='<div class="swiper-slide news-item"><a href="views/news/newsDetails.html?id='+ item.id +'&articleTypeName='+ item.articleTypeName +'">'
             html+='<div class="img-box">'
             html+='<img src="'+item.articleBanner+'" alt="">'
             html+='<span class="tip">'+item.articleTypeName+'</span></div>'

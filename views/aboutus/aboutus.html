@@ -15,7 +15,7 @@
 <body>
 	<!-- 头部 -->
 	<div class="header">
-		<img src="../../images/aboutus/aboout-header.gif" width="100%" height="100%" alt="">
+		<img src="../../images/aboutus/aboout-header.gif" width="100%" height="100%" alt="" id="banner">
 	</div>
 
 	<!-- content部分 -->
@@ -23,6 +23,7 @@
 		<h3 class="about-title">公司介绍</h3>
 		<!-- 简介内容 -->
 		<div class="content-detail">
+<!--
 			<p class="paragraph">
 				北京光纬戏剧有限公司是北京光纬文化传媒有限公司的控股子公司。是专注于戏剧领域的演出机构。
 			</p>
@@ -32,14 +33,16 @@
 					<img src="../../images/aboutus/stagephoto.gif" class="fl-r" width="49%">
 				</div>
 				<p class="stage-footnote-wrap">
-					<!-- <img src="../../images/aboutus/stage_row.gif" class="stage-row"> -->
+					 <img src="../../images/aboutus/stage_row.gif" class="stage-row"> 
 					<span class="stage-row"></span>
 					<i class="stage-footnote">光纬<span class="stage-circle"></span>剧照</i>
 				</p>
 			</div>
-			<p class="paragraph">
-				北京光纬戏剧有限公司是北京光纬文化传媒有限公司的控股子公司。是专注于戏剧领域的演出机构。北京光纬戏剧有限公司是北京光纬文化传媒有限公司的控股子公司。是专注于戏剧领域的演出机构。北京光纬戏剧有限公司是北京光纬文化传媒有限公司的控股子公司。是专注于戏剧领域的演出机构。
+-->
+			<p class="paragraph" id="introduction">
+				
 			</p>
+<!--			<img src="" alt="" id="rightImage">-->
 		</div>
 
 		<!-- 关于我们 -->
@@ -79,7 +82,7 @@
 				</a>
 			</li>
 			<li class="footer-nav">
-				<a class="footer-nav-item" href="#">
+				<a class="footer-nav-item" href="../plays/plays.html">
 					<div class="nav-img-wrap play-img"></div>
 					<p class="nav-name">剧目</p>
 				</a>
@@ -98,5 +101,29 @@
 			</li>
 		</ul>
 	</div>
+	<script src="../../js/lib/jquery.min.js"></script>
+	<script>
+        function getData(){
+           $.ajax({
+               type:'get',
+               dataType:'json',
+               async:false,
+               url:'http://www.guangweixiju.com/drama/mobile/aboutus',
+               success:function(msg){
+                   if(msg.code == 200){
+                      $('#banner').attr('src',msg.data.introduction.banner)
+                      $('#introduction').html(msg.data.introduction.introduce)
+                      $('#rightImage').attr('src',msg.data.introduction.rightImage)
+                   }else{
+                       
+                   }
+               },
+               error:function(msg){
+                   
+               }
+           })
+       }
+       getData();
+    </script>
 </body>
 </html>

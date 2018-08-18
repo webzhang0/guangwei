@@ -186,8 +186,8 @@
 	width: 1.44rem;
 	height: 1.44rem;
 	border-radius: 0.72rem;
-	background: url(../../images/aboutus/profile.gif) no-repeat center center;
-	background-size: 100% 100%;
+	/*background: url(../../images/aboutus/profile.gif) no-repeat center center;
+	background-size: 100% 100%;*/
 }
 .creators {
 	padding-left: .2rem;
@@ -288,9 +288,11 @@
 	height: 2rem;
 	border-radius: .05rem;
 	/*background: url(../../images/aboutus/profile.gif) no-repeat center center;*/
+    margin-right: .2rem;
 }
 .report-item-inf {
-	width: 3.8rem;
+	/*width: 3.8rem;*/
+	width: 100%;
 }
 .report-item-title {
 	font-size: .28rem;

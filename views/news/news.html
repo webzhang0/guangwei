@@ -15,17 +15,19 @@
 <body>
 	<div class="header">
 		<ul class="nav clearfix">
-			<li class="nav-item active">行业新闻</li>
-			<li class="nav-item">媒体报道</li>
-			<li class="nav-item">公司动态</li>
+			<li class="nav-item active" data-id="11">行业新闻</li>
+			<li class="nav-item" data-id="12">媒体报道</li>
+			<li class="nav-item" data-id="8">公司动态</li>
 		</ul>
 	</div>
-	<div class="content">
+	<div class="content" id="content">
 		
-		<div class="nav-content-wrap">
+		<div class="nav-content-wrap" id="contentWrap">
 			<!-- 行业新闻 -->
-			<div class="nav-content field-news-content active">
+			<div class="nav-content field-news-content active" id="scroller">
+				<!-- <div class="up" id="up">下拉刷新</div> -->
 				<ul class="lists-item-wrap" id="listWrap">
+					<!-- 
 					<li class="lists-item">
 						<a href="newsDetails.html" class="clearfix">
 							<div class="lists-pic-wrap fl-r">
@@ -39,80 +41,21 @@
 								</p>
 							</div>
 						</a>
-					</li>
-					<li class="lists-item">
-						<a href="newsDetails.html" class="clearfix">
-							<div class="lists-pic-wrap fl-r">
-								<img src="../../images/news/news-pic.gif">
-							</div>
-							<div class="lists-item-content">
-								<h3 class="lists-item-title">《雅各比和雷弹头》：荒诞背后蕴含生命哲思</h3>
-								<p class="list-inf">
-									<span class="news-src">人民网</span>
-									<span class="news-date">2018年3月5日</span>
-								</p>
-							</div>
-						</a>
-					</li>
+					</li> -->
 				</ul>
+				<!-- <div class="down" id="down">上拉加载更多</div> -->
 			</div>
 
 			<!-- 媒体报道 -->
 			<!-- <div class="nav-content media-report">
-				<ul class="lists-item-wrap">
-					<li class="lists-item">
-						<a href="newsDetails.html" class="clearfix">
-							<div class="lists-pic-wrap fl-r">
-								<img src="../../images/news/news-pic.gif">
-							</div>
-							<div class="lists-item-content">
-								<h3 class="lists-item-title">《燃烧的疯人院》受邀参加瑶湖艺术节</h3>
-								<p class="list-inf">
-									<span class="news-src">人民网</span>
-									<span class="news-date">2018年3月5日</span>
-								</p>
-							</div>
-						</a>
-					</li>
-				</ul>
 			</div> -->
 			
 			<!-- 公司动态 -->
 			<!-- <div class="nav-content company-dynamic">
-				<ul class="lists-item-wrap">
-					<li class="lists-item">
-						<a href="newsDetails.html" class="clearfix">
-							<div class="lists-pic-wrap fl-r">
-								<img src="../../images/news/news-pic.gif">
-							</div>
-							<div class="lists-item-content">
-								<h3 class="lists-item-title">《雅各比和雷弹头》：荒诞背后蕴含生命哲思</h3>
-								<p class="list-inf">
-									<span class="news-src">人民网</span>
-									<span class="news-date">2018年3月5日</span>
-								</p>
-							</div>
-						</a>
-					</li>
-					<li class="lists-item">
-						<a href="newsDetails.html" class="clearfix">
-							<div class="lists-pic-wrap fl-r">
-								<img src="../../images/news/news-pic.gif">
-							</div>
-							<div class="lists-item-content">
-								<h3 class="lists-item-title">《雅各比和雷弹头》：荒诞背后蕴含生命哲思</h3>
-								<p class="list-inf">
-									<span class="news-src">人民网</span>
-									<span class="news-date">2018年3月5日</span>
-								</p>
-							</div>
-						</a>
-					</li>
-				</ul>
 			</div> -->
 			
-			<p class="no-more">
-				没有更多了
+			<p class="no-more" id="noMore">
+				<!-- 没有更多了 -->
 			</p>
 		</div>
 	</div>
@@ -148,6 +91,7 @@
 	</div>
 
 	<script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/lib/iscroll.js"></script>
 	<script type="text/javascript" src="../../js/common/common.js"></script>
 	<script type="text/javascript" src="../../js/news/news.js"></script>
 </body>

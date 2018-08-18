@@ -17,7 +17,7 @@
     </div>
     <div class="content">
         <div class="contact-img">
-            <img src="../../images/aboutus/aboout-header.gif" alt="">
+            <img src="../../images/aboutus/aboout-header.gif" alt="" id="banner">
         </div>
         <div class="contact-content">
              <div class="contact-title">
@@ -35,21 +35,21 @@
              <div class="contact-us">
                  <div class="partOne">
                      <div class="input-name">姓名</div>
-                     <input type="text" class="contact-input" placeholder="请填写姓名">
+                     <input type="text" class="contact-input" placeholder="请填写姓名" id="userName">
                  </div>
                  <div class="partTwo">
                      <div class="input-name">
                           电话
                      </div>
-                     <input type="text" class="contact-input" placeholder="请填写电话">
+                     <input type="text" class="contact-input" placeholder="请填写电话" id="userPhone">
                  </div>
                  <div class="partThree">
                      <div class="input-name">
                          留言
                      </div>
-                     <textarea name="" class="contact-textarea" placeholder="请输入内容"></textarea>
+                     <textarea name="" class="contact-textarea" placeholder="请输入内容" id="content"></textarea>
                  </div>
-                 <div class="contact-btn">
+                 <div class="contact-btn" onclick="submit()">
                      提交留言
                  </div>
              </div>
@@ -58,5 +58,47 @@
     
     <script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common/common.js"></script>
+    <script>
+        var contactImg= ''
+       function getImg(){
+           $.ajax({
+               type:'get',
+               dataType:'json',
+               async:false,
+               url:'http://www.guangweixiju.com/drama/mobile/contactus/img',
+               success:function(msg){
+                   if(msg.code == 200){
+                       contactImg = msg.data.img;
+                       $('#banner').attr('src',contactImg)
+                   }else{
+                       
+                   }
+               },
+               error:function(msg){
+                   
+               }
+           })
+       }
+        getImg();
+        
+        
+        function submit(){
+            var subdata = {
+                userName:$('#userName').val(),
+                userPhone:$('#userPhone').val(),
+                content:$('#content').val()
+            }
+            $.ajax({
+                type:'post',
+                data:JSON.stringify(subdata),
+                contentType: "application/json",  
+                url:'http://www.guangweixiju.com/drama/mobile/contactus',
+                success:function(data){
+                    alert(data)
+                }
+            })
+        }
+        
+    </script>
 </body>
 </html>

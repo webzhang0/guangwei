@@ -47,7 +47,7 @@ function renderFirstScreen(data) {
     var performanceHtml = '';
     var showTimeItems = showTimeDetail.length > 5 ? 5 : showTimeDetail.length;
     for (var m = 0; m < showTimeItems; m++) {
-        if (showTimeDetail[m] == "") {
+        if ($.trim(showTimeDetail[m]) == "") {
             continue;
         }
         performanceHtml += '<li class="clearfix">'
@@ -122,7 +122,9 @@ function renderFirstScreen(data) {
     var creatorsHtml = '<div class="swiper-wrapper creators-wrap">';
     for (var k = 0; k < data['performers'].length; k++) {
         // data['performers'][k]
-        creatorsHtml += '<a href="creatorsIntro.html?id='+ data['drama']['id'] +'" class="swiper-slide creator-wrap"><div class="clearfix personal"><img class="profile-wrap fl-l" src="'+ data['performers'][k]['performerPhoto'] +'"><div class="name-position fl-l">'
+        creatorsHtml += '<a href="creatorsIntro.html?id='+ data['drama']['id'] +'" class="swiper-slide creator-wrap"><div class="clearfix personal">'
+            // +'<img class="profile-wrap fl-l" src="'+ data['performers'][k]['performerPhoto'] +'"><div class="name-position fl-l">'
+            +'<div class="profile-wrap fl-l" style="background:url('+ data['performers'][k]['performerPhoto'] +') no-repeat center top;background-size:cover;"></div><div class="name-position fl-l">'
             +'<span class="creator-name">'+ data['performers'][k]['performer'] +'</span><br/>'
             +'<span class="creator-position">'+ data['performers'][k]['performerLabel'] +'</span></div></div>'
             +'<p class="intro">'+ data['performers'][k]['performerIntroduce'].substr(0, 30) +'...</p></a>'
@@ -144,8 +146,8 @@ function renderFirstScreen(data) {
             +'<img class="author-profile fl-l" src="' + returnProfile() + '"></div>'
             +'<div class="author-inf fl-l">'
             +'<p class="author-name">'+ data['comments'][l]['commentUser'] +'</p>'
-            if(data['comments'][l]['commentDetail'].length > 120) {
-                comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'].substr(0, 120) +'...<span class="see-all">查看全部></span></p>'
+            if(data['comments'][l]['commentDetail'].length > 110) {
+                comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'].substr(0, 110) +'...<span class="see-all">查看全部></span></p>'
             }else {
                 comments +='<p class="comment-content">'+ data['comments'][l]['commentDetail'] +'</p>'
             }
@@ -168,7 +170,7 @@ function renderFirstScreen(data) {
         reportsHtml += '<li class="report-item">'
             +'<a href="javascript:;" class="clearfix report-a">'
             +'<img src="'+ data['articles'][n]['articleBanner'] + '" class="report-img fl-l">'
-            +'<div class="fl-r report-item-inf">'
+            +'<div class="report-item-inf">'
             +'<h3 class="report-item-title">' + data['articles'][n]['articleTitle'] + '</h3>'
 
             if(data['articles'][n]['articleIntroduce'].length > 25) {
@@ -185,6 +187,9 @@ function renderFirstScreen(data) {
         var index = $(this).closest('li').index();
         $(this).parent('.report-item-con').html(data['articles'][index]['articleIntroduce']);
     });
+    if (data['articles'].length <= 0) {
+        $('#moreReport').hide();
+    }
 
     // 购票按钮
     $('#thirdPartyLink').attr('href', data['drama']['thirdPartyLink']);

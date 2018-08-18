@@ -26,9 +26,11 @@
 	height: 2rem;
 	border-radius: .05rem;
 	/*background: url(../../images/aboutus/profile.gif) no-repeat center center;*/
+    margin-right: .2rem;
 }
 .report-item-inf {
-	width: 3.8rem;
+	/*width: 3.8rem;*/
+	width: 100%;
 }
 .report-item-title {
 	font-size: .28rem;
@@ -46,4 +48,7 @@
 .see-all {
 	padding: 0 .1rem;
     color: #318aff;
+}
+.report-date {
+	padding-left: .1rem;
 }

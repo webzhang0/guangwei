@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../../css/common/base.css">
     <link rel="stylesheet" href="../../css/aboutus/memorabilia.css">
     <script src="../../js/lib/jquery.min.js"></script>
     <script src="../../js/lib/windowSize.js"></script>
 </head>
+
 <body>
     <div class="back-wrap">
         <a href="javascript:;" class="goback" id="goBack">
@@ -20,47 +22,10 @@
             大事记
         </header>
         <div class="banner">
-            <img src="../../images/aboutus/aboout-header.gif" alt="">
+            <img src="../../images/aboutus/aboout-header.gif" alt="" id="banner">
         </div>
         <div class="time-line-content">
-             <div class="time-line-item">
-                 <div class="left">2014</div>
-                 <div class="time-line-box">
-                     <div class="item">
-                         <div class="item-time">
-                             09月12日
-                         </div>
-                         <div class="item-content">
-                            《随黄公望游富春山》首演
-                         </div>
-                         <div class="item-time">
-                             09月12日
-                         </div>
-                         <div class="item-content">
-                            《随黄公望游富春山》首演
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="time-line-item">
-                 <div class="left">2014</div>
-                 <div class="time-line-box">
-                     <div class="item">
-                         <div class="item-time">
-                             09月12日
-                         </div>
-                         <div class="item-content">
-                            《随黄公望游富春山》首演
-                         </div>
-                         <div class="item-time">
-                             09月12日
-                         </div>
-                         <div class="item-content">
-                            《随黄公望游富春山》首演
-                         </div>
-                     </div>
-                 </div>
-             </div>
+            
         </div>
     </div>
     <div class="footer">
@@ -91,8 +56,59 @@
             </li>
         </ul>
     </div>
-    
+
     <script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common/common.js"></script>
+    <script>
+        var memData = {};
+        //获取大事记数据
+        function getData() {
+            $.ajax({
+                type: 'get',
+                dataType: 'json',
+                async: false,
+                url: ' http://www.guangweixiju.com/drama/mobile/bigEvent',
+                success: function(msg) {
+                    if (msg.code == 200) {
+
+                        $('#banner').attr('src', msg.data.bigImage.banner);
+                        $.each(msg.data.year, function(index, item) {
+                            var year = item.year;
+                            memData[item.year] = [];
+                            $.each(msg.data.all, function(index, item) {
+                                if (item.year == year) {
+                                    memData[year].unshift(item)
+                                }
+                            })
+                        })
+                        var html = '';
+                        $.each(memData, function(index, item) {
+                            html += '<div class="time-line-item">'
+                            html += '<div class="left">' + index + '</div>'
+                            html += '<div class="time-line-box">'
+                            html += '<div class="item">'
+                            $.each(item, function(s, k) {
+                                html += '<div class="item-time">'
+                                html +=  k.moth+'月'+k.day+'日'
+                                html += '</div>'
+                                html += '<div class="item-content">'+k.eventIntroduce
+                                html += '</div>'
+                            })
+                            html += '</div></div></div>'
+                        })
+                        $('.time-line-content').html(html)
+                    } else {
+
+                    }
+                },
+                error: function(msg) {
+
+                }
+            })
+        }
+        getData();
+
+    </script>
 </body>
+
 </html>

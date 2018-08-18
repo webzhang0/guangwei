@@ -40,7 +40,7 @@
 	top: -0.55rem;
 	/*left: 0.4rem;*/
 	border-radius: 50%;
-	background: url(../../images/aboutus/profile.gif) center center no-repeat;
+	background: url(../../images/aboutus/profile.gif) top center no-repeat;
 	background-size: 100% 100%;
 }
 .manager-inf {

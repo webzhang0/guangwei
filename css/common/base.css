@@ -60,6 +60,7 @@ a{text-decoration:none;}
 	width: 100%;
 	height: 0.95rem;
 	background: #fff;
+	z-index: 1000;
 }
 .footer-nav {
 	box-sizing: border-box;
