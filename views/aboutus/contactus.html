@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
     <title>联系我们</title>
     <link rel="stylesheet" href="../../css/common/base.css">
     <link rel="stylesheet" href="../../css/aboutus/contact.css">
-    
+    <link rel="stylesheet" href="../../js/lib/layer/mobile/need/layer.css">
     <script type="text/javascript" src="../../js/lib/windowSize.js"></script>
 </head>
+
 <body>
     <div class="back-wrap">
         <a href="javascript:;" class="goback" id="goBack">
@@ -20,85 +22,116 @@
             <img src="../../images/aboutus/aboout-header.gif" alt="" id="banner">
         </div>
         <div class="contact-content">
-             <div class="contact-title">
-                  联系我们
-             </div>
-             <div class="myposition">
-                 <div class="title">光纬戏剧有限公司</div>
-                 <div class="item wei">微信：guangweixiju</div>
-                 <div class="item phone">电话：010-67588868</div>
-                 <div class="item dizhi">地址：北京市朝阳区广渠门外大街8号优士阁A座12B02</div>
-                 <div id="map"> 
+            <div class="contact-title">
+                联系我们
+            </div>
+            <div class="myposition">
+                <div class="title">光纬戏剧有限公司</div>
+                <div class="item wei">微信：guangweixiju</div>
+                <div class="item phone">电话：010-67588868</div>
+                <div class="item dizhi">地址：北京市朝阳区广渠门外大街8号优士阁A座12B02</div>
+                <div id="map">
                     <img src="../../images/aboutus/map.jpg">
-                 </div>
-             </div>
-             <div class="contact-us">
-                 <div class="partOne">
-                     <div class="input-name">姓名</div>
-                     <input type="text" class="contact-input" placeholder="请填写姓名" id="userName">
-                 </div>
-                 <div class="partTwo">
-                     <div class="input-name">
-                          电话
-                     </div>
-                     <input type="text" class="contact-input" placeholder="请填写电话" id="userPhone">
-                 </div>
-                 <div class="partThree">
-                     <div class="input-name">
-                         留言
-                     </div>
-                     <textarea name="" class="contact-textarea" placeholder="请输入内容" id="content"></textarea>
-                 </div>
-                 <div class="contact-btn" onclick="submit()">
-                     提交留言
-                 </div>
-             </div>
+                </div>
+            </div>
+            <div class="contact-us">
+                <div class="partOne">
+                    <div class="input-name">姓名</div>
+                    <input type="text" class="contact-input" placeholder="请填写姓名" id="userName">
+                </div>
+                <div class="partTwo">
+                    <div class="input-name">
+                        电话
+                    </div>
+                    <input type="text" class="contact-input" placeholder="请填写电话" id="userPhone">
+                </div>
+                <div class="partThree">
+                    <div class="input-name">
+                        留言
+                    </div>
+                    <textarea name="" class="contact-textarea" placeholder="请输入内容" id="content"></textarea>
+                </div>
+                <div class="contact-btn" onclick="submit()">
+                    提交留言
+                </div>
+            </div>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="../../js/common/common.js"></script>
+    <script src="../../js/lib/layer/mobile/layer.js"></script>
     <script>
-        var contactImg= ''
-       function getImg(){
-           $.ajax({
-               type:'get',
-               dataType:'json',
-               async:false,
-               url:'http://www.guangweixiju.com/drama/mobile/contactus/img',
-               success:function(msg){
-                   if(msg.code == 200){
-                       contactImg = msg.data.img;
-                       $('#banner').attr('src',contactImg)
-                   }else{
-                       
-                   }
-               },
-               error:function(msg){
-                   
-               }
-           })
-       }
-        getImg();
-        
-        
-        function submit(){
-            var subdata = {
-                userName:$('#userName').val(),
-                userPhone:$('#userPhone').val(),
-                content:$('#content').val()
-            }
+        var contactImg = ''
+
+        function getImg() {
             $.ajax({
-                type:'post',
-                data:JSON.stringify(subdata),
-                contentType: "application/json",  
-                url:'http://www.guangweixiju.com/drama/mobile/contactus',
-                success:function(data){
-                    alert(data)
+                type: 'get',
+                dataType: 'json',
+                async: false,
+                url: 'http://www.guangweixiju.com/drama/mobile/contactus/img',
+                success: function(msg) {
+                    if (msg.code == 200) {
+                        contactImg = msg.data.img;
+                        $('#banner').attr('src', contactImg)
+                    } else {
+
+                    }
+                },
+                error: function(msg) {
+
                 }
             })
         }
-        
+        getImg();
+
+
+        function submit() {
+            var subdata = {
+                userName: $('#userName').val(),
+                userPhone: $('#userPhone').val(),
+                content: $('#content').val()
+            }
+            if($('#userName').val() == ''){
+                layer.open({
+                        content:'请输入姓名',
+                        time: 2,
+                        skin: 'msg'
+                });
+                return false
+            }
+            if($('#userPhone').val() == ''){
+                layer.open({
+                        content:'请输入电话',
+                        time: 2,
+                        skin: 'msg'
+                });
+                return false
+            }
+             if($('#content').val() == ''){
+                layer.open({
+                        content:'请输入留言内容',
+                        time: 2,
+                        skin: 'msg'
+                });
+                return false
+            }
+            $.ajax({
+                type: 'post',
+                data: JSON.stringify(subdata),
+                contentType: "application/json",
+                url: 'http://www.guangweixiju.com/drama/mobile/contactus',
+                success: function(data) {
+                    layer.open({
+                        content: data,
+                        time: 2,
+                        skin: 'msg'
+                    });
+                }
+            })
+        }
+
     </script>
 </body>
+
 </html>
