@@ -168,7 +168,7 @@ function renderFirstScreen(data) {
     var reportsHtml = '';
     for(var n = 0; n < data['articles'].length; n++) {
         reportsHtml += '<li class="report-item">'
-            +'<a href="javascript:;" class="clearfix report-a">'
+            +'<a href="../../views/news/newsDetails.html?id='+ data['articles'][n]['id'] +'&articleTypeName=媒体报道" class="clearfix report-a">'
             +'<img src="'+ data['articles'][n]['articleBanner'] + '" class="report-img fl-l">'
             +'<div class="report-item-inf">'
             +'<h3 class="report-item-title">' + data['articles'][n]['articleTitle'] + '</h3>'
@@ -183,10 +183,10 @@ function renderFirstScreen(data) {
             +'</div></a></li>'
     }
     $('#reports').html(reportsHtml);
-    $('#reports').on('click', '.see-all', function() {
-        var index = $(this).closest('li').index();
-        $(this).parent('.report-item-con').html(data['articles'][index]['articleIntroduce']);
-    });
+    // $('#reports').on('click', '.see-all', function() {
+    //     var index = $(this).closest('li').index();
+    //     $(this).parent('.report-item-con').html(data['articles'][index]['articleIntroduce']);
+    // });
     if (data['articles'].length <= 0) {
         $('#moreReport').hide();
     }

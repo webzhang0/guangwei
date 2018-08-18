@@ -32,7 +32,7 @@ a{text-decoration:none;}
 	top: 0;
 	width: 100%;
 	box-sizing: border-box;
-	height: 0.5rem;
+	height: 0.6rem;
 	padding: 0.15rem 0.2rem 0;
 	background: #fff;
 	z-index: 1000;
@@ -40,7 +40,7 @@ a{text-decoration:none;}
 .goback {
 	display: block;
 	width: 0.66rem;
-	height: 0.28rem;
+	height: 0.3rem;
 	line-height: 0.28rem;
 	background: url(../../images/aboutus/goback.gif) left center no-repeat;
 	background-size: 0.12rem 0.22rem;

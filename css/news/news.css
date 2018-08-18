@@ -1,3 +1,6 @@
+html, body {
+	background: #f2f3f5;
+}
 /*--头部导航--*/
 .header {
 	position: fixed;
@@ -9,14 +12,16 @@
 	z-index: 100;
 }
 .content {
-	position: absolute;
+	/*position: absolute;
 	top: 0.7rem;
 	left: 0;
-	bottom: 0.95rem;
+	bottom: 0.95rem;*/
 	width: 100%;
 	padding-top: 0.15rem;
 	background: #f2f3f5;
-	overflow: auto;
+	/*overflow: auto;*/
+	margin-top: .7rem;
+	margin-bottom: 1rem;
 }
 .nav {
 	height: 0.7rem;
