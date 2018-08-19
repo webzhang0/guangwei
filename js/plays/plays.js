@@ -30,7 +30,7 @@ function renderPlaysList(list) {
 	for (var i = 0; i < list.length; i++) {
 		oList += '<li><a class="plays-item clearfix" href="playsDetails.html?id='+ list[i]['id'] +'">'
 			+'<img src="' + list[i]['dramaCoverImage'] + '" class="stage-photo fl-l">'
-			+'<div class="plays-inf fl-r">'
+			+'<div class="plays-inf fl-l">'
 			+'<h3 class="plays-title">' + list[i]['dramaName'] + '</h3>';
 
 			if (list[i]['theShelves'] == 1 && amongShow(list[i]['showStartDateTime'], list[i]['showEndDateTime'])) {

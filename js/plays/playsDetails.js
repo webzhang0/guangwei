@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 });
 
 // 获取当前详情页数据
@@ -117,10 +118,18 @@ function renderFirstScreen(data) {
         slidesPerView :'auto',
         freeMode: true,
     });
+    $('#stagePhotoSwiper').on('click', '.stage-photo-wrap', function () {
+        window.location.href = 'photoPreview.html?id=' +  data['drama']['id'];
+    });
+
 
     // 主创介绍
     var creatorsHtml = '<div class="swiper-wrapper creators-wrap">';
-    for (var k = 0; k < data['performers'].length; k++) {
+    var performersLength = 0;
+    if (!!data['performers']) {
+        performersLength = data['performers'].length;
+    }
+    for (var k = 0; k < performersLength; k++) {
         // data['performers'][k]
         creatorsHtml += '<a href="creatorsIntro.html?id='+ data['drama']['id'] +'" class="swiper-slide creator-wrap"><div class="clearfix personal">'
             // +'<img class="profile-wrap fl-l" src="'+ data['performers'][k]['performerPhoto'] +'"><div class="name-position fl-l">'
@@ -216,3 +225,48 @@ function returnProfile() {
         return '../../images/plays/profile-m.png';
     }
 }
+
+// $.fn.ImgZoomIn = function () {
+
+//     var window_h = $(window).height();
+//     var scroll_h = $(window).scrollTop();
+
+//     bgstr = '<div id="ImgZoomInBG" style="position: fixed;filter:Alpha(Opacity=80); opacity:0.8;z-index: 10000;background-color: #000;top:0;bottom:0;width:100%;height:100%;display: none;"></div>';
+//     imgstr = '<img id="ImgZoomInImage" src="' + $(this).attr('src')+'" style="cursor:pointer; display:none; position:fixed;width: 100%;top:3rem;left:0; z-index:10001;" />';
+//     if ($('#ImgZoomInBG').length < 1) {
+//         $('body').append(bgstr);
+//     }
+//     if ($('#ImgZoomInImage').length < 1) {
+//         $('body').append(imgstr);
+//     }
+//     else {
+//         $('#ImgZoomInImage').attr('src', $(this).attr('src'));
+//     }
+
+//     $('#ImgZoomInBG').css('top', scroll_h+'px');
+//     $('#ImgZoomInBG').css('width', '100%');
+//     $('#ImgZoomInBG').css('height', window_h+'px');
+
+//     $('#ImgZoomInImage').css('width', '100%');
+//     $('#ImgZoomInImage').css('height', (window_h/2)+'px');
+//     $('#ImgZoomInImage').css('top', (scroll_h+window_h/4)+'px');
+
+//     $('#ImgZoomInBG').show();
+//     $('#ImgZoomInImage').show();
+// };
+// $(document).on("click", '.stage-photo-wrap img', function (t) {
+//     $(this).ImgZoomIn();
+//     document.ontouchstart=function(){
+//         return false;
+//     }
+//     t.preventDefault();
+//     return false;
+// });
+// $(document).on('click','#ImgZoomInImage, #ImgZoomInBG',function(t){
+//     $('#ImgZoomInImage').hide();
+//     $('#ImgZoomInBG').hide();
+//     document.ontouchstart=function(){
+//         return true;
+//     }
+//     t.preventDefault();
+// });

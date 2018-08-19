@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0,minimal-ui, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="baidu-site-verification" content="XEESrz1S4I">
+	<title></title>
+
+    <link rel="stylesheet" href="../../js/lib/swiper/swiper-4.3.3.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/common/base.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../../css/plays/playsDetails.css"> -->
+	<script type="text/javascript" src="../../js/lib/windowSize.js"></script>
+	<style type="text/css">
+		html, body {
+			position: relative;
+			height: 100%;
+			background: #000;
+		}
+		.swiper-container {
+			height: 100%;
+		}
+		.swiper-slide {
+			display: flex;
+		    align-items: center;
+		    vertical-align: middle;
+		}
+		.video {
+			position: relative;
+		}
+		.play-icon {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 5em;
+			/*height: .4rem;*/
+			margin: auto;
+		}
+		.stage-photo-wrap>img {
+			border-radius: .05rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="swiper-container photo-preview" id="stagePhotoPreview">
+	    <!-- <div class="swiper-wrapper">
+	        <a href="javascript:;" class="swiper-slide ">
+	            <img src="../../images/plays/stage-photo.gif" width="100%" class="preivew-photo">
+	        </a>
+	        <a href="javascript:;" class="swiper-slide ">
+	            <img src="../../images/plays/stage-photo.gif" width="100%" class="preivew-photo">
+	        </a>
+	        <a href="javascript:;" class="swiper-slide ">
+	            <img src="../../images/plays/stage-photo.gif" width="100%" class="preivew-photo">
+	        </a>
+	    </div> -->
+	</div>
+
+	<script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
+    <script src="../../js/lib/swiper/swiper-4.3.3.min.js"></script>
+	<script type="text/javascript" src="../../js/common/common.js"></script>
+	<script type="text/javascript">
+	    // 剧照预览
+	    $.ajax({
+	    	url: BASEURL + 'detail/' + getParams('id'),
+	        type: 'GET',
+	        dataType: 'json',
+	        // data: {param1: 'value1'},
+	        success: function (data) {
+	            if (data.code != 200) {
+	                layerAlert(data.msg);
+	            }else {
+	                // renderPlaysList(data.data);
+	                renderStagePhoto(data.data);
+	            }
+	        },
+	        error: function (err) {
+	            layerAlert('系统繁忙，请稍后再试');
+	        }
+	    });
+	    // 点击返回
+	    $('#stagePhotoPreview').on('click', '.swiper-slide>img', function () {
+	    	window.history.back();
+	    });
+
+	    function renderStagePhoto(data) {
+
+	    	var stagePhoHtml = '<div class="swiper-wrapper">';
+		    for(var j = 0; j < data['marvellous'].length; j++) {
+		        if (data['marvellous'][j]['marvellousLink'] != "") {
+		            stagePhoHtml += '<div class="swiper-slide video"><a href="'+ data['marvellous'][j]['marvellousLink'] +'"><img src="../../images/plays/play-icon.png" class="play-icon">'
+		            	+'<img src="'+ data['marvellous'][j]['marvellousImage'] +'" width="100%"></a></div>'
+		        }else {
+		            stagePhoHtml += '<div class="swiper-slide">'
+		            	+'<img src="'+ data['marvellous'][j]['marvellousImage'] +'" width="100%"></div>'
+		        }
+		        // stagePhoHtml +='<img src="'+ data['marvellous'][j]['marvellousImage'] +'" width="100%">'
+		        //             +'</div>'
+		    }
+		    stagePhoHtml += '</div>';
+		    $('#stagePhotoPreview').html(stagePhoHtml);
+
+		    var stagePhotoPreview = new Swiper('#stagePhotoPreview',{
+		        // slidesPerView :'auto',
+		        // freeMode: true,
+		    });
+	    }
+	</script>
+</body>
+</html>

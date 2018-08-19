@@ -1,3 +1,6 @@
+.content {
+	padding: 0;
+}
 .banner-wrap {
 	position: relative;
 	width: 100%;
@@ -38,13 +41,13 @@
 	border-bottom: .15rem solid #f2f3f5;
 }
 .performance-inf-title {
-	padding: .2rem;
-	font-size: .4rem;
+	padding: .2rem 0;
+	font-size: .36rem;
 	color: #343434;
 }
 .performance-inf-lists-wrap {
 	position: relative;
-	padding: 0 .2rem .2rem;
+	padding: 0 0 .2rem;
 }
 .location-pic {
 	width: .24rem;
@@ -104,7 +107,7 @@
 	padding: 0 .2rem .3rem;
 }
 .synopsis-title {
-	font-size: .4rem;
+	font-size: .36rem;
 	color: #343434;
 	padding: .3rem 0;
 }
@@ -137,7 +140,7 @@
 }
 .stage-photo-title {
 	padding: .3rem 0;
-	font-size: .4rem;
+	font-size: .36rem;
 	color: #343434;
 }
 .stage-photo-wrap {
@@ -160,6 +163,19 @@
 }
 .stage-photo-wrap>img {
 	border-radius: .05rem;
+}
+/*剧照预览*/
+.photo-preview {
+	position: fixed;
+    left: 0;
+    top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 1111;
+}
+.preivew-photo {
+	margin-top: 2rem;
 }
 /* 主创介绍 */
 .creators-wrap {
@@ -194,7 +210,7 @@
 }
 .creators-title {
 	padding: .3rem 0;
-	font-size: .4rem;
+	font-size: .36rem;
 	color: #343434;
 }
 .name-position {
@@ -219,7 +235,7 @@
 }
 .comments-title {
 	padding-top: .3rem;
-	font-size: .4rem;
+	font-size: .36rem;
 	color: #343434;
 }
 .more-comments {
@@ -269,7 +285,7 @@
 }
 .report-title {
 	padding-top: .3rem;
-	font-size: .4rem;
+	font-size: .36rem;
 	color: #343434;
 }
 .more-report {

@@ -63,7 +63,7 @@ var homePage = {
                     if(indexData.dramas[k].theShelves == 1 && getNowTime()<indexData.dramas[k].showEndDateTime){
                         ll+='<span>售票中</span></div>'
                     }else{
-                        ll+='<span>已下架</span></div>'
+                        ll+='<span>本轮已结束</span></div>'
                     }
                     ll+= '</a></li>'
                 }

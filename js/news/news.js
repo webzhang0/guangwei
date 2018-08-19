@@ -34,8 +34,8 @@ $(document).ready(function () {
 	// })
 
 });
-/*行业新闻*/
-getNewsList(11);
+/*公司动态*/
+getNewsList(8);
 
 /*查询列表*/
 function getNewsList(id) {
