@@ -10,7 +10,8 @@
 
     <link rel="stylesheet" href="../../js/lib/swiper/swiper-4.3.3.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/common/base.css">
-	<link rel="stylesheet" type="text/css" href="../../css/plays/playsDetails.css">
+    <link rel="stylesheet" type="text/css" href="../../css/plays/playsDetails.css">
+	<link rel="stylesheet" type="text/css" href="../../js/lib/jqueryRebox/jquery-rebox.css">
 	<script type="text/javascript" src="../../js/lib/windowSize.js"></script>
 </head>
 <body>
@@ -97,7 +98,10 @@
 
     	<!-- 精彩剧照 -->
     	<div class="stage-photo">
-    		<h3 class="stage-photo-title">视频剧照</h3>
+            <div class="clearfix">
+        		<h3 class="stage-photo-title fl-l">视频剧照</h3>
+                <a href="javascript:;" class="fl-r all-stage-photo" id="preAllStagePhoto">全部剧照</a>
+            </div>
             <div class="swiper-container" id="stagePhotoSwiper">
             	<!-- <div href="javascript:;" class="swiper-slide stage-photo-wrap video swiper-slide-active">
             		<a style="display:block;width: 5px;height: 5px;background: red;">
@@ -233,22 +237,17 @@
     		<a href="javascript:;" class="btn-block stop-ticket" id="stopTicket">本轮已结束，请关注下轮</a>
     	</div>
     </div>
-    <!-- 剧照 -->
-    <!-- <div class="swiper-container photo-preview" id="stagePhotoPreview">
-        <div class="swiper-wrapper">
-            <a href="javascript:;" class="swiper-slide ">
-                <img src="../../images/plays/stage-photo.gif" width="100%" class="preivew-photo">
-            </a>
-            <a href="javascript:;" class="swiper-slide ">
-                <img src="../../images/plays/stage-photo.gif" width="100%" class="preivew-photo">
-            </a>
-            <a href="javascript:;" class="swiper-slide ">
-                <img src="../../images/plays/stage-photo.gif" width="100%" class="preivew-photo">
-            </a>
+
+    <!-- 剧照预览 -->
+    <div class="pre-wrap" id="preView">
+        <div class="swiper-container photo-preview" id="stagePhotoPreview">
+            
         </div>
-    </div> -->
-	
-	<script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
+    </div>
+    <script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/lib/layer/mobile/layer.js"></script>
+    <script type="text/javascript" src="../../js/lib/jqueryRebox/jquery-litelighter.js"></script>
+	<script type="text/javascript" src="../../js/lib/jqueryRebox/jquery-rebox.js"></script>
     <script src="../../js/lib/swiper/swiper-4.3.3.min.js"></script>
 	<script type="text/javascript" src="../../js/common/common.js"></script>
 	<script type="text/javascript" src="../../js/plays/playsDetails.js"></script>

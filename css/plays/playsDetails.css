@@ -140,8 +140,9 @@
 }
 .stage-photo-title {
 	padding: .3rem 0;
-	font-size: .36rem;
 	color: #343434;
+    /*padding-top: .3rem;*/
+    font-size: .36rem;
 }
 .stage-photo-wrap {
 	width: 3rem;
@@ -161,11 +162,17 @@
 	/*height: .4rem;*/
 	margin: auto;
 }
-.stage-photo-wrap>img {
+.stage-photo-wrap>div {
 	border-radius: .05rem;
 }
+.all-stage-photo {
+	padding-top: .4rem;
+    margin-right: .2rem;
+    font-size: .24rem;
+    color: #318aff;
+}
 /*剧照预览*/
-.photo-preview {
+/*.photo-preview {
 	position: fixed;
     left: 0;
     top: 0;
@@ -176,7 +183,7 @@
 }
 .preivew-photo {
 	margin-top: 2rem;
-}
+}*/
 /* 主创介绍 */
 .creators-wrap {
 	/*width: 5.12rem;*/
@@ -362,4 +369,43 @@
 }
 .report-date {
 	padding-left: .1rem;
+}
+/*剧照预览*/
+.pre-wrap {
+	display: none;
+	position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgb(0, 0, 0);
+    z-index: 10001;
+}
+.photo-preview {
+	/*display: none;*/
+}
+.photo-preview.swiper-container {
+	height: 100%;
+	z-index: 10001;
+}
+.photo-preview .swiper-slide {
+	display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.photo-preview .video {
+	position: relative;
+}
+.photo-preview .play-icon {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 5em;
+	/*height: .4rem;*/
+	margin: auto;
+}
+.photo-preview .swiper-slide>img {
+	border-radius: .05rem;
 }

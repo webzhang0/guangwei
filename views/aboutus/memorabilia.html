@@ -81,8 +81,9 @@
                                 }
                             })
                         })
-                        var html = '';
+                        
                         $.each(memData, function(index, item) {
+                            var html = '';
                             html += '<div class="time-line-item">'
                             html += '<div class="left">' + index + '</div>'
                             html += '<div class="time-line-box">'
@@ -95,8 +96,9 @@
                                 html += '</div>'
                             })
                             html += '</div></div></div>'
+                            $('.time-line-content').prepend(html)
                         })
-                        $('.time-line-content').html(html)
+                        
                     } else {
 
                     }

@@ -107,9 +107,10 @@ function renderFirstScreen(data) {
         if (data['marvellous'][j]['marvellousLink'] != "") {
             stagePhoHtml += '<div class="swiper-slide stage-photo-wrap video"><a href="'+ data['marvellous'][j]['marvellousLink'] +'"><img src="../../images/plays/play-icon.png" class="play-icon"></a>'
         }else {
-            stagePhoHtml += '<div class="swiper-slide stage-photo-wrap">'
+            stagePhoHtml += '<div class="swiper-slide stage-photo-wrap preview-photo" href="javascript:;">'
         }
-        stagePhoHtml +='<img src="'+ data['marvellous'][j]['marvellousImage'] +'" width="100%" height="100%">'
+        // stagePhoHtml +='<img src="'+ data['marvellous'][j]['marvellousImage'] +'" width="100%" height="100%">'
+        stagePhoHtml +='<div style="background:url('+ data['marvellous'][j]['marvellousImage'] +') no-repeat center center;background-size:cover;width:100%;height:100%;"></div>'
                     +'</div>'
     }
     stagePhoHtml += '</div>';
@@ -118,9 +119,42 @@ function renderFirstScreen(data) {
         slidesPerView :'auto',
         freeMode: true,
     });
-    $('#stagePhotoSwiper').on('click', '.stage-photo-wrap', function () {
-        window.location.href = 'photoPreview.html?id=' +  data['drama']['id'];
+    $('#preAllStagePhoto').click(function () {
+        window.location.href = '../../views/plays/allStagePhoto.html?id=' + getParams('id'); 
     });
+
+    // 剧照预览
+    var prePhoHtml = '<div class="swiper-wrapper">';
+    for(var j = 0; j < data['marvellous'].length; j++) {
+        if (data['marvellous'][j]['marvellousLink'] != "") {
+            // prePhoHtml += '<div href="'+ data['marvellous'][j]['marvellousLink'] +'" class="swiper-slide video"><img src="../../images/plays/play-icon.png" class="play-icon">'
+            prePhoHtml += '<div class="swiper-slide video"><a href="'+ data['marvellous'][j]['marvellousLink'] +'"><img src="../../images/plays/play-icon.png" class="play-icon"></a>'
+                +'<img src="'+ data['marvellous'][j]['marvellousImage'] +'" width="100%"></div>'
+        }else {
+            prePhoHtml += '<div class="swiper-slide">'
+                +'<img src="'+ data['marvellous'][j]['marvellousImage'] +'" width="100%"></div>'
+        }
+    }
+    prePhoHtml += '</div>';
+    $('#stagePhotoPreview').html(prePhoHtml);
+
+    $('#stagePhotoSwiper').on('click', '.stage-photo-wrap', function () {
+        // window.location.href = 'photoPreview.html?id=' +  data['drama']['id'];
+        var index = $(this).index();
+        $('#preView').show();
+        var stagePhotoSwiper = new Swiper('#stagePhotoPreview', {
+            initialSlide: index
+        });
+    });
+    $('#preView').click(function () {
+        $(this).hide();
+    });
+
+    // 灯箱效果
+    // $('#stagePhotoSwiper').rebox({
+    //     selector: '.preview-photo',
+    //     close: '&times;',
+    // })
 
 
     // 主创介绍

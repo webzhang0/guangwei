@@ -42,12 +42,12 @@ var homePage = {
     banner:function(){
         var html = '';
         $.each(indexData.banners,function(index,item){
-            html+='<div class="swiper-slide"><a href="'+item.bannerLink+'"><img src="'+item.banner+'" alt=""></a></div>'
+            html+="<div class='swiper-slide'><a href='"+item.bannerLink+"' style='background-image:url("+item.banner+");'></a></div>"
         })
         $('#bannerSwiper .swiper-wrapper').html(html)
     },
     recommendation:function(){
-        var html = '<a href="'+indexData.welfareDrama.dramaLink+'"><img src="'+indexData.welfareDrama.image+'" alt=""></a>';
+        var html = '<a href="views/plays/playsDetails.html?id='+indexData.welfareDrama.id+'"><img src="'+indexData.welfareDrama.image+'" alt=""></a>';
         $('#recommendtionCover').html(html)
         var count = Math.ceil(indexData.dramas.length/3);
         var swiperHtml = '';
@@ -55,7 +55,7 @@ var homePage = {
             var ll = '<ul class="">';
             for(var k= i*3;k<(i+1)*3;k++){
                 if(indexData.dramas[k]){
-                    ll+='<li><a href="'+indexData.dramas[k].thirdPartyLink+'">'
+                    ll+='<li><a href="views/plays/playsDetails.html?id='+indexData.dramas[k].id+'">'
                     ll+='<img src="'+indexData.dramas[k].dramaCoverImage+'" alt="">'
                     ll+='<div class="describe">'
                     ll+='<h2>'+indexData.dramas[k].dramaName+'</h2>'

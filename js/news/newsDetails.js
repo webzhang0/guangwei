@@ -3,6 +3,7 @@ getArticleDetails();
 
 // 获取文章详情
 function getArticleDetails() {
+	document.title = getParams('articleTypeName');
 	$.ajax({
 		url: BASEURL + 'article/detail/' + getParams('id'),
 		type: 'GET',

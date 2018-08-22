@@ -1,0 +1,57 @@
+.content {
+	width: 100%;
+	padding: .2rem;
+}
+
+.photo {
+	display: block;
+	float: left;
+	/*box-sizing: border-box;*/
+	width: 1.7rem;
+	height: 1.2rem;
+	margin: 0 .05rem .1rem 0;
+}
+.photo-item {
+	/*display: block;
+	width: 96%;
+	height: 1.7rem;*/
+}
+/*剧照预览*/
+.pre-wrap {
+	display: none;
+	position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: rgb(0, 0, 0);
+    z-index: 10001;
+}
+.photo-preview {
+	/*display: none;*/
+}
+.photo-preview.swiper-container {
+	height: 100%;
+	z-index: 10001;
+}
+.photo-preview .swiper-slide {
+	display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.photo-preview .video {
+	position: relative;
+}
+.photo-preview .play-icon {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 5em;
+	/*height: .4rem;*/
+	margin: auto;
+}
+.photo-preview .swiper-slide>img {
+	border-radius: .05rem;
+}
