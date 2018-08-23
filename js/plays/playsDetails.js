@@ -230,7 +230,7 @@ function renderFirstScreen(data) {
                 reportsHtml +='<p class="report-item-con">' + data['articles'][n]['articleIntroduce'] +'</p>'
             }
 
-        reportsHtml +='<p class="report-src-wrap"><span class="report-src">光纬戏剧</span><span class="report-date">'+ formatterDate(data['comments'][n]['createDateTime']) +'</span></p>'
+        reportsHtml +='<p class="report-src-wrap"><span class="report-src">'+ data['articles'][n]['author'] +'</span><span class="report-date">'+ formatterDate(data['articles'][n]['createDateTime']) +'</span></p>'
             +'</div></a></li>'
     }
     $('#reports').html(reportsHtml);
