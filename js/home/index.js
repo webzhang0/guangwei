@@ -47,13 +47,13 @@ var homePage = {
         $('#bannerSwiper .swiper-wrapper').html(html)
     },
     recommendation:function(){
-        var html = '<a href="views/plays/playsDetails.html?id='+indexData.welfareDrama.id+'"><img src="'+indexData.welfareDrama.image+'" alt=""></a>';
-        $('#recommendtionCover').html(html)
-        var count = Math.ceil(indexData.dramas.length/3);
+        var html = '<a href="views/plays/playsDetails.html?id='+indexData.dramas[0].id+'"><img src="'+indexData.dramas[0].dramaClassicImage+'" alt=""></a>';
+        $('#recommendtionCover').append(html)
+        var count = Math.ceil((indexData.dramas.length-1)/3);
         var swiperHtml = '';
         for(var i = 0;i<count;i++){
             var ll = '<ul class="">';
-            for(var k= i*3;k<(i+1)*3;k++){
+            for(var k= i*3+1;k<(i+1)*3+1;k++){
                 if(indexData.dramas[k]){
                     ll+='<li><a href="views/plays/playsDetails.html?id='+indexData.dramas[k].id+'">'
                     ll+='<img src="'+indexData.dramas[k].dramaCoverImage+'" alt="">'
@@ -97,7 +97,7 @@ var homePage = {
     hot:function(){
         var html = '';
         $.each(indexData.comments,function(index,item){
-            html+='<div class="hot-item"><a href="'+item.path+'">'
+            html+='<div class="hot-item"><a href="views/news/newsDetails.html?id='+ item.id +'&articleTypeName=热门评论">'
             html+='<img src="'+item.image+'" alt="">'
             html+='<div class="hot-right">'
             html+='<span style="vertical-align: middle">'

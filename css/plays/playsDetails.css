@@ -5,8 +5,8 @@
 	position: relative;
 	width: 100%;
 	height: 4.3rem;
-	background: url(../../images/aboutus/stagephoto.gif) no-repeat;
-	background-size: cover;
+	/*background: url(../../images/aboutus/stagephoto.gif) no-repeat;*/
+	/*background-size: cover;*/
 }
 .plays-title-wrap {
 	position: absolute;
