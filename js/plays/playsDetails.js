@@ -31,10 +31,11 @@ function renderFirstScreen(data) {
     var drama = data['drama'];
     var bannerHtml = '';
 
-    bannerHtml += '<div class="plays-title-wrap">'
-        +'<h3 class="plays-title">'+ drama['dramaName'] +'</h3>'
-        +'<div class="plays-price">￥'+ drama['minPrice'] + '-' + drama['maxPrice'] +'</div></div>'
-        +'<img src="'+ drama['dramaCoverImage'] +'" class="plays-poster">';
+    bannerHtml += '<div class="plays-poster" style="background:url('+ drama['dramaCoverImage'] +') no-repeat center center;background-size: cover;"></div>'
+        // '<div class="plays-title-wrap">'
+        // +'<h3 class="plays-title">'+ drama['dramaName'] +'</h3>'
+        // +'<div class="plays-price">￥'+ drama['minPrice'] + '-' + drama['maxPrice'] +'</div></div>'+
+        // '<img src="'+ drama['dramaCoverImage'] +'" class="plays-poster">';
 
     $('#bannerWrap').html(bannerHtml);
     $('#bannerWrap').css({
@@ -42,6 +43,13 @@ function renderFirstScreen(data) {
         // 'background': 'url(../../images/aboutus/stagephoto.gif) no-repeat',
         'background-size': 'cover'
     });
+
+    // 标题
+    var titleWrap = "";
+    titleWrap += '<h3 class="plays-title">'+ drama['dramaName'] +'</h3>'
+        +'<div class="plays-price">￥'+ drama['minPrice'] + '-' + drama['maxPrice'] +'</div>'
+
+    $('#playsTitleWrap').html(titleWrap);
 
     // 演出信息
     var showTimeDetail = drama['showTimeDetail'].replace(/(<br\/>)|(<br>)|(\n)|(\r)/g, '<br/>').split('<br/>');
