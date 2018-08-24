@@ -47,7 +47,7 @@
 }
 /*演出信息*/
 .performance-inf-wrap {
-	padding: 1.2rem 0.2rem 0.5rem;
+	padding: .8rem 0.2rem 0.5rem;
 	border-top-left-radius:.2em;
 	border-top-right-radius:.2em;
 	border-bottom: .15rem solid #f2f3f5;
@@ -344,7 +344,7 @@
 }
 /* 购票 */
 .buy-wrap {
-	margin: 1.4rem 0;
+	margin: .8rem 0;
 	padding: 0 .4rem;
 }
 .btn-block {

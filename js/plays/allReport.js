@@ -38,7 +38,7 @@ function renderAllReport(data) {
                 reportsHtml +='<p class="report-item-con">' + data[n]['articleIntroduce'] +'</p>'
             }
 
-        reportsHtml +='<p class="report-src-wrap"><span class="report-src">光纬戏剧</span><span class="report-date">'+ formatterDate(data[n]['createDateTime']) +'</span></p>'
+        reportsHtml +='<p class="report-src-wrap"><span class="report-src">'+ data[n]['author'] +'</span><span class="report-date">'+ formatterDate(data[n]['createDateTime']) +'</span></p>'
             +'</div></a></li>'
     }
     $('#reports').html(reportsHtml);

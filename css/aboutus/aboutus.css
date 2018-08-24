@@ -24,12 +24,12 @@
 	font-size: 0.4rem;
 }
 .content-detail {
-	padding: 0 0.2rem 2rem;
+	padding: 0 0.2rem 1rem;
 	font-size: 0.24rem;
 	color: #282828;
 }
 .paragraph {
-	margin-top: 0.35rem;
+	/*margin-top: 0.35rem;*/
 	text-indent: 0.48rem;
 }
 .aboutus-img-wrap {
@@ -61,7 +61,8 @@
 }
 /*关于我们*/
 .aboutus-wrap {
-	padding-bottom: 1rem;
+	padding-bottom: .5rem;
+	/*padding-bottom: 1rem;*/
 }
 .aboutus-item {
 	display: block;

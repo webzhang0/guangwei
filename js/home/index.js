@@ -47,7 +47,7 @@ var homePage = {
         $('#bannerSwiper .swiper-wrapper').html(html)
     },
     recommendation:function(){
-        var html = '<a href="views/plays/playsDetails.html?id='+indexData.dramas[0].id+'"><img src="'+indexData.dramas[0].dramaClassicImage+'" alt=""></a>';
+        var html = '<a href="views/plays/playsDetails.html?id='+indexData.dramas[0].id+'"><img src="'+indexData.dramas[0].dramaClassicImage+'" alt=""></a><div class="name">'+indexData.dramas[0].dramaName+'</div>';
         $('#recommendtionCover').append(html)
         var count = Math.ceil((indexData.dramas.length-1)/3);
         var swiperHtml = '';

@@ -23,10 +23,12 @@
 	padding-bottom: 0.3rem;
 }
 .paragraph {
-	padding: 0 0.2rem;
+	/*padding: 0 0.2rem;*/
 	font-size: 0.28rem;
 	color: #838181;
 }
 img {
 	display: inline;
+	width: 100%;
+	height: auto;
 }

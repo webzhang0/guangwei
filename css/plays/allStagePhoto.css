@@ -55,3 +55,9 @@
 .photo-preview .swiper-slide>img {
 	border-radius: .05rem;
 }
+.no-more {
+    line-height: 1rem;
+    color: #bdbdbd;
+    font-size: 0.24rem;
+    text-align: center;
+}
